@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vue-page-stack-example/precache-manifest.a675919b7a2521c4b818cf15d2efea98.js"
+  "/vue-page-stack-example/precache-manifest.304e7814ea334e0585def46d2837fbe5.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "20190604"});
+workbox.core.setCacheNameDetails({prefix: "vue-page-stack-example"});
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to

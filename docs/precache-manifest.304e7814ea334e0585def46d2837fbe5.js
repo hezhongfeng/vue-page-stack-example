@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/vue-page-stack-example/robots.txt"
   },
   {
-    "revision": "03db0e581c8e7c36bacff0f103593231",
+    "revision": "4c137e613706734d949f0d45c6b6aff8",
     "url": "/vue-page-stack-example/index.html"
   }
 ];
