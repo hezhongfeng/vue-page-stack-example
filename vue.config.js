@@ -4,13 +4,9 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? 'vue-stack-example' : '',
   assetsDir: 'static',
   productionSourceMap: false,
-
+  outputDir: 'docs',
   devServer: {
     port: 1234
-  },
-
-  configureWebpack: {
-    plugins: []
   },
 
   chainWebpack: config => {
