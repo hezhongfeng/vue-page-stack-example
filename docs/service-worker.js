@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vue-page-stack-example/precache-manifest.a8f14848f4cd5c319b2d372120bbd5f0.js"
+  "/vue-page-stack-example/precache-manifest.a675919b7a2521c4b818cf15d2efea98.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "20190604"});

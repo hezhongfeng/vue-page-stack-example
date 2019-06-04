@@ -132,15 +132,12 @@ export default {
 <style lang="scss">
 .login {
   height: 100%;
-  background-image: url('~@/assets/images/bg/bg0.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
   .form {
     padding: 60vw 10px 10px 10px;
     .logo {
       position: absolute;
       top: -20px;
+      left: 0;
       width: 100%;
       svg {
         height: 75vw;

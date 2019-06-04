@@ -8613,10 +8613,10 @@ vue-modal-plugins@^1.0.1:
   dependencies:
     vue "^2.6.8"
 
-vue-page-stack@^0.0.2-beta3:
-  version "0.0.2-beta3"
-  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-0.0.2-beta3.tgz#a82902288be56c073c8f6df05655c40e67ffc989"
-  integrity sha512-YfSxXKDHIeyV74VcKv3R/xOC9Q7I06xc1lEErwtzZtJ+4wPTiAxkqAHEQe5XBSy+crM0q4P+lRm+xnkg34BzBQ==
+vue-page-stack@^0.0.2-beta5:
+  version "0.0.2-beta5"
+  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-0.0.2-beta5.tgz#a0766e5a4663748aff51c15420bbac2b86f76afe"
+  integrity sha512-D38aRgzcdWJDTGmimjHw8JeW8egAIe9t0RIeZkwVxj4olJx1noOKv2P8KwC9KQZsw5i5yGjyzHFaLO3EndZWVg==
 
 vue-router@^3.0.3:
   version "3.0.6"
