@@ -41,6 +41,9 @@ export default {
   },
   activated() {
     console.log('detail activated');
+    if (this.textValue) {
+      this.textValue = this.textValue + ' + activated';
+    }
   },
   beforeRouteUpdate(to, from, next) {
     TweenLite.to(this, 0.7, { pageIndex: Number(to.params.id) });
