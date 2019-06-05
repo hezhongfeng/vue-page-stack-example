@@ -1,4 +1,4 @@
-# vue-stack-example
-vue-stack's example
+# vue-page-stack-example
+vue-page-stack's example
 
 [预览](https://hezhongfeng.github.io/vue-page-stack-example/)
