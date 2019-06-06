@@ -97,7 +97,8 @@ export default {
   .h-body {
     height: calc(100% - 50px);
     .cube-tab-panels,
-    .cube-tab-panels-group {
+    .cube-tab-panels-group,
+    .cube-tab-panel {
       height: 100%;
     }
     .cube-tab-panels-group {

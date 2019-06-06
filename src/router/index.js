@@ -28,6 +28,8 @@ const routes = [
 ];
 
 let router = new Router({
+  mode: 'history',
+  base: process.env.BASE_URL,
   routes
 });
 // 导航守卫

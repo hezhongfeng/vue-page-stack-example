@@ -6,7 +6,7 @@ import './registerServiceWorker';
 import VuePageStack from 'vue-page-stack';
 
 Vue.config.productionTip = false;
-Vue.use(VuePageStack, { router, name: 'VuePageStack' });
+Vue.use(VuePageStack, { router });
 
 new Vue({
   router,
