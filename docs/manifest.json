@@ -1,6 +1,6 @@
 {
-  "name": "20190604",
-  "short_name": "20190604",
+  "name": "vue-page-stack",
+  "short_name": "vue-page-stack",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
