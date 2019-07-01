@@ -71,7 +71,6 @@ export default {
   position: absolute;
   transition: opacity 0.5s, transform 0.5s;
   width: 100%;
-  // background-color: #f1f1f1;
 }
 
 .forward-enter,
