@@ -100,7 +100,7 @@
       </svg>
       <div class="package">
         <div class="version">v1.0.0</div>
-        <div class="auther">作者：hezf</div>
+        <div class="auther">Author: hezf</div>
       </div>
     </div>
     <div class="desc">Vue组件堆栈管理器，一个在移动端使用的，模仿原生UI Stack的插件。</div>

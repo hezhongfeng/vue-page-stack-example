@@ -1,6 +1,6 @@
 <template>
   <div class="main-list">
-    <stack-header></stack-header>
+    <stack-header :title="$t('home')"></stack-header>
     <cube-scroll ref="scroll0" :data="list">
       <main-item v-for="(item, index) in list" :key="index" :item="item" :index="index" @click="onClick(item)"></main-item>
     </cube-scroll>

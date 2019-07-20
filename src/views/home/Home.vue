@@ -2,16 +2,10 @@
   <div class="c-home">
     <div class="h-body">
       <cube-tab-panels v-model="selectedIndex">
-        <cube-tab-panel label="主页" value="0">
+        <cube-tab-panel label="$t('home')" value="0">
           <main-list></main-list>
         </cube-tab-panel>
-        <cube-tab-panel label="功能" value="1">
-          <function></function>
-        </cube-tab-panel>
-        <cube-tab-panel label="订单" value="2">
-          <order-list></order-list>
-        </cube-tab-panel>
-        <cube-tab-panel label="我的" value="3">
+        <cube-tab-panel :label="$t('about')" value="3">
           <my></my>
         </cube-tab-panel>
       </cube-tab-panels>
@@ -26,13 +20,11 @@
 
 <script>
 import MainList from '@/views/main/MainList';
-import Function from '@/views/function/Function';
-import OrderList from '@/views/order/OrderList';
 import My from '@/views/my/My';
 
 export default {
   name: 'Home',
-  components: { MainList, My, OrderList, Function },
+  components: { MainList, My },
   props: {},
   data() {
     return {
@@ -44,22 +36,12 @@ export default {
       return [
         {
           value: '0',
-          label: '主页',
+          label: this.$t('home'),
           icon: 'iconfont ' + (this.selectedIndex === '0' ? 'iconhome_fill_light' : 'iconhome_light')
         },
         {
-          value: '1',
-          label: '功能',
-          icon: 'iconfont ' + (this.selectedIndex === '1' ? 'icongongneng' : 'icongongneng1')
-        },
-        {
-          value: '2',
-          label: '订单列表',
-          icon: 'iconfont ' + (this.selectedIndex === '2' ? 'iconorder' : 'iconorderlisto')
-        },
-        {
           value: '3',
-          label: '我的',
+          label: this.$t('about'),
           icon: 'iconfont ' + (this.selectedIndex === '3' ? 'iconmy_fill_light' : 'iconmy_light')
         }
       ];
@@ -127,3 +109,11 @@ export default {
   }
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "hello": "Hello i18n in SFC!"
+  }
+}
+</i18n>

@@ -35,6 +35,12 @@ module.exports = {
     'cube-ui': {
       postCompile: false,
       theme: false
+    },
+    i18n: {
+      locale: 'zh',
+      fallbackLocale: 'zh',
+      localeDir: 'locales',
+      enableInSFC: true
     }
   }
 };

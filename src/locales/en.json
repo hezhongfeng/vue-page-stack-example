@@ -1,0 +1,6 @@
+{
+  "QuickStart": "Quick Start",
+  "explain": "Caching Vue component instances without destroying them like native App in Vue SPA.",
+  "home": "Home",
+  "about": "About"
+}
