@@ -103,15 +103,15 @@
         <div class="auther">Author: hezf</div>
       </div>
     </div>
-    <div class="desc">Vue组件堆栈管理器，一个在移动端使用的，模仿原生UI Stack的插件。</div>
-    <div class="desc">想法来源于实际业务需求，在进行复杂的公众号开发和Hybrid开发的时候经常会有这样的需求，最后vue-stack诞生了。</div>
-    <div class="desc">欢迎使用，欢迎提PR，希望能帮到你。</div>
+    <div class="desc">{{$t('aboutPage.desc1')}}</div>
+    <div class="desc">{{$t('aboutPage.desc2')}}</div>
+    <div class="desc">{{$t('aboutPage.desc3')}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'My',
+  name: 'About',
   components: {},
   props: {},
   data() {
@@ -147,9 +147,9 @@ export default {
   }
   .desc {
     margin: 10px;
-    line-height: 1.3;
+    line-height: 1.8;
     font-size: 14px;
-    color: #333;
+    color: #8799a3;
   }
 }
 </style>

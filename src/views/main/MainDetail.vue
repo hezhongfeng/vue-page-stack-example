@@ -4,14 +4,15 @@
     <div class="p-scroll-wrap">
       <cube-scroll ref="scroll">
         <div class="desc-wrap">
-          <div class="desc">可以在下面的表单中输入内容，然后push到下一层</div>
+          <div class="desc">{{$t('detail.desc')}}</div>
         </div>
         <div class="form">
-          <cube-input v-model="textValue" placeholder="输入必要信息"></cube-input>
-          <cube-button @click="onPush">Push到列表</cube-button>
-          <cube-button @click="onLogin">Push到登录</cube-button>
-          <cube-button @click="onReplace">Replace当前页</cube-button>
-          <cube-button>当前页码{{animatedNumber}}</cube-button>
+          <cube-input v-model="textValue" :placeholder="$t('detail.placeholder')"></cube-input>
+          <cube-button @click="onLogin">{{$t('detail.push.login')}}</cube-button>
+          <cube-button @click="onPush">{{$t('detail.push.list')}}</cube-button>
+          <cube-button @click="onReplace">{{$t('detail.replace')}}</cube-button>
+          <cube-button>{{$t('detail.currentPageNumber')}}{{' '+animatedNumber}}</cube-button>
+          <cube-button>{{$t('detail.currentUserName')}}{{' '+userName}}</cube-button>
         </div>
       </cube-scroll>
     </div>
@@ -28,6 +29,7 @@ export default {
   props: {},
   data() {
     return {
+      userName: '',
       textValue: '',
       pageIndex: 0
     };
@@ -41,6 +43,9 @@ export default {
   },
   activated() {
     console.log('detail activated');
+    if (window.sessionStorage.username) {
+      this.userName = window.sessionStorage.username;
+    }
     if (this.textValue) {
       this.textValue = this.textValue + ' + activated';
     }

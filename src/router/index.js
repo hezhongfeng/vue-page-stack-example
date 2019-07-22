@@ -4,7 +4,6 @@ import Index from '@/views/index/Index';
 import MainList from '@/views/main/MainList';
 import MainDetail from '@/views/main/MainDetail';
 import Login from '@/views/login/Login.vue';
-import Signup from '@/views/login/Signup';
 import Home from '@/views/home/Home';
 
 Vue.use(Router);
@@ -23,7 +22,6 @@ const routes = [
     component: MainDetail
   },
   { path: '/login', component: Login },
-  { path: '/signup', component: Signup },
   { path: '/home/:tab', component: Home }
 ];
 
@@ -32,6 +30,5 @@ let router = new Router({
   base: process.env.BASE_URL,
   routes
 });
-// 导航守卫
 
 export default router;

@@ -2,11 +2,11 @@
   <div class="c-home">
     <div class="h-body">
       <cube-tab-panels v-model="selectedIndex">
-        <cube-tab-panel label="$t('home')" value="0">
+        <cube-tab-panel :label="$t('home')" value="0">
           <main-list></main-list>
         </cube-tab-panel>
         <cube-tab-panel :label="$t('about')" value="3">
-          <my></my>
+          <about></about>
         </cube-tab-panel>
       </cube-tab-panels>
     </div>
@@ -20,11 +20,11 @@
 
 <script>
 import MainList from '@/views/main/MainList';
-import My from '@/views/my/My';
+import About from '@/views/about/About';
 
 export default {
   name: 'Home',
-  components: { MainList, My },
+  components: { MainList, About },
   props: {},
   data() {
     return {
@@ -109,11 +109,3 @@ export default {
   }
 }
 </style>
-
-<i18n>
-{
-  "en": {
-    "hello": "Hello i18n in SFC!"
-  }
-}
-</i18n>

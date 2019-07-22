@@ -107,7 +107,7 @@
       <p class="version">v1.0.0</p>
     </div>
     <div class="form">
-      <cube-button @click="onExperience">{{ $t('QuickStart') }}</cube-button>
+      <cube-button @click="onExperience">{{ $t('quickStart') }}</cube-button>
     </div>
     <div class="change-language">
       <cube-select v-model="value" :options="options" @change="changeLanguage"></cube-select>
