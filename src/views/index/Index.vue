@@ -110,6 +110,7 @@
       <cube-button @click="onExperience">{{ $t('quickStart') }}</cube-button>
     </div>
     <div class="change-language">
+      <div class="language-title">{{$t('language')}}</div>
       <cube-select v-model="value" :options="options" @change="changeLanguage"></cube-select>
     </div>
   </div>
@@ -186,6 +187,9 @@ export default {
     bottom: 10px;
     left: 0;
     right: 0;
+    .language-title {
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
