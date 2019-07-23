@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Index from '@/views/index/Index';
-import MainList from '@/views/main/MainList';
-import MainDetail from '@/views/main/MainDetail';
-import Login from '@/views/login/Login.vue';
-import Home from '@/views/home/Home';
+const Index = () => import('@/views/index/Index');
+const MainList = () => import('@/views/main/MainList');
+const MainDetail = () => import('@/views/main/MainDetail');
+const Login = () => import('@/views/login/Login');
+const Home = () => import('@/views/home/Home');
 
 Vue.use(Router);
 
