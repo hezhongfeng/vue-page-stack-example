@@ -26,6 +26,9 @@ export default {
   created() {
     this.getList();
   },
+  mounted() {
+    console.log(this.$pageStack.getStack());
+  },
   activated() {
     console.log('activated');
   },
