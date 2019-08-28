@@ -8575,15 +8575,15 @@ vue-loader@^15.7.0:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-page-stack@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-1.1.0.tgz#5c5010b0e75dcd23ddbfde401bf9c1f5ebf1d557"
-  integrity sha512-TkUV+OIbetLgWz0miJKiDMpQrRyFIFa5ZUXY6soWadLqwwUSjfXOShksRJEtxAmLDBg6jBtaOArocX6L2CBG6Q==
+vue-page-stack@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-1.2.0.tgz#cbb92f117eb80d9f654f6f23aa5c1030863aedb8"
+  integrity sha512-aCNPZlqr/ob/NtzsyXV5ZDRpXA3tpF2qufPLfbWBDb/XOHsYf/seM2LPHWUVtlke5TLSqKGivIISEQxKbmzmgQ==
 
-vue-router@^3.0.7:
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.7.tgz#b36ca107b4acb8ff5bc4ff824584059c23fcb87b"
-  integrity sha512-utJ+QR3YlIC/6x6xq17UMXeAfxEvXA0VKD3PiSio7hBOZNusA1jXcbxZxVEfJunLp48oonjTepY8ORoIlRx/EQ==
+vue-router@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.2.tgz#2e0904703545dabdd42b2b7a2e617f02f99a1969"
+  integrity sha512-WssQEHSEvIS1/CI4CO2T8LJdoK4Q9Ngox28K7FDNMTfzNTk2WS5D0dDlqYCaPG+AG4Z8wJkn1KrBc7AhspZJUQ==
 
 vue-style-loader@^4.1.0:
   version "4.1.2"
