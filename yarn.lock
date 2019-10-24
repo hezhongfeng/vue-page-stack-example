@@ -8575,10 +8575,10 @@ vue-loader@^15.7.0:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-page-stack@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-1.2.0.tgz#cbb92f117eb80d9f654f6f23aa5c1030863aedb8"
-  integrity sha512-aCNPZlqr/ob/NtzsyXV5ZDRpXA3tpF2qufPLfbWBDb/XOHsYf/seM2LPHWUVtlke5TLSqKGivIISEQxKbmzmgQ==
+vue-page-stack@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-1.2.2.tgz#5e3178eeaccfb6cbc97416cf2f842d7822a3190b"
+  integrity sha512-u19K5I1WIn0Dg79YD/lqCL/AA0RATmE808jf1WOHR7bIA+o2aL3Oxt4wArC/4w8ie8T79noEXgS/tPAMExapRA==
 
 vue-router@^3.1.2:
   version "3.1.2"

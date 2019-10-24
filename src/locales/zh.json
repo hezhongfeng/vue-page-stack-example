@@ -1,7 +1,7 @@
 {
   "language": "语言",
   "quickStart": "开始体验",
-  "explain": "在Vue单页应用在像原生App一样缓存UI页面实例",
+  "explain": "让Vue单页应用像原生App一样缓存UI页面",
   "home": "主页",
   "about": "关于",
   "login": "登录",
