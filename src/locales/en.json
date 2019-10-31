@@ -14,6 +14,7 @@
     "desc": "enter some text in the input，then push to next page",
     "placeholder": "enter some text",
     "push": {
+      "same": "Push to next page",
       "login": "Push to Login page",
       "list": "Push to List (cached same page)"
     },

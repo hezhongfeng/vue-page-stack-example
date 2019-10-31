@@ -2,7 +2,7 @@
   <div id="app">
     <transition :name="transitionName">
       <vue-page-stack>
-        <router-view class="router-view-c"></router-view>
+        <router-view :key="$route.fullPath" class="router-view-c"></router-view>
       </vue-page-stack>
     </transition>
   </div>

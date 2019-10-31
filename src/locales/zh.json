@@ -14,6 +14,7 @@
     "desc": "可以在下面的input中输入内容，然后push到下一页面",
     "placeholder": "输入一些信息",
     "push": {
+      "same": "Push到下一页",
       "login": "Push到登录",
       "list": "Push到列表(可以缓存相同的页面)"
     },

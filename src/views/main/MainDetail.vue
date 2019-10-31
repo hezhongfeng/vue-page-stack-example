@@ -8,6 +8,7 @@
         </div>
         <div class="form">
           <cube-input v-model="textValue" :placeholder="$t('detail.placeholder')"></cube-input>
+          <cube-button @click="onPushSame">{{$t('detail.push.same')}}</cube-button>
           <cube-button @click="onLogin">{{$t('detail.push.login')}}</cube-button>
           <cube-button @click="onPush">{{$t('detail.push.list')}}</cube-button>
           <cube-button @click="onReplace">{{$t('detail.replace')}}</cube-button>
@@ -68,6 +69,9 @@ export default {
     },
     onReplace() {
       this.$router.replace('/main-detail/' + (Number(this.$route.params.id) + 1));
+    },
+    onPushSame() {
+      this.$router.push('/main-detail/' + (Number(this.$route.params.id) + 1));
     },
     onPush() {
       this.$router.push('/main');
