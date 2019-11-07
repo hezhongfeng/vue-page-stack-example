@@ -31,4 +31,9 @@ let router = new Router({
   routes
 });
 
+router.beforeEach((to, from, next) => {
+  console.log('beforeEach');
+  next();
+});
+
 export default router;
