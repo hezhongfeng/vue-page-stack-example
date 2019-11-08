@@ -1,15 +1,18 @@
 language: node_js
 node_js: lts/*
 
-install: yarn
+# install: yarn
 
 cache:
   yarn: true
 
-script: yarn build
+# script: yarn build
 
 after_success:
-  - git init
+  - git clone https://${GITHUB_REF} .temp
+  - cd .temp
+  - yarn
+  - yarn build
   - git config --global user.name "hezf"
   - git config --global user.email "287645587@qq.com"
   - git add .
@@ -19,4 +22,3 @@ after_success:
 branches:
   only:
     - master
-
