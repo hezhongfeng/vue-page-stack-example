@@ -1,18 +1,16 @@
 language: node_js
-node_js:
-  - "node"
+node_js: lts/*
 
-install:
-    - yarn
+install: yarn
 
-cache: yarn
+cache:
+  yarn: true
 
-script: yarn run build
+script: yarn build
 
 deploy:
-provider: pages
-skip_cleanup: true
-github_token: $GITHUB_TOKEN
-local_dir: dist
-on:
-  branch: master
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
