@@ -9,13 +9,12 @@ cache:
 script: yarn build
 
 after_success:
-  - cd ./docs
   - git init
   - git config --global user.name "hezf"
   - git config --global user.email "287645587@qq.com"
   - git add .
   - git commit -m "Automatically update from travis-ci"
-  - git push --quiet --force  "https://${GITHUB_TOKEN}@${GITHUB_REF}" master
+  - git push "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
 
 branches:
   only:
