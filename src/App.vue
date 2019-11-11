@@ -35,7 +35,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   position: relative;
   height: 100%;
-  // 覆盖掉UI原始style
+  // 覆盖掉UI原始style1
   .cube-btn {
     border-radius: 5px;
     padding: 15px;
