@@ -1,24 +1,38 @@
+# 语言
 language: node_js
+# 版本
 node_js: lts/*
-
+# 要最新的就行，所以克隆最近的一次commit
+git:
+  depth: 1
+# 安装
 install: yarn
-
-cache:
-  yarn: true
-
+# 指定了缓存的内容，这里是yarn安装的东西，既node_modules
+cache: yarn
+# build
 script: yarn build
+# build成功后
+# after_success:
+#   - git clone https://${GITHUB_REF} .temp
+#   - rm -rf .temp/docs
+#   - cp -r docs .temp/docs
+#   - cd .temp
+#   - git config --global user.name "hezf"
+#   - git config --global user.email "287645587@qq.com"
+#   - git add .
+#   - git commit -m "Automatically update from travis-ci"
+#   - git push "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
 
-after_success:
-  - git clone https://${GITHUB_REF} .temp
-  - rm -rf .temp/docs
-  - cp -r docs .temp/docs
-  - cd .temp
-  - git config --global user.name "hezf"
-  - git config --global user.email "287645587@qq.com"
-  - git add .
-  - git commit -m "Automatically update from travis-ci"
-  - git push "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
+# branches:
+#   only:
+#     - master
 
-branches:
-  only:
-    - master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  committer_from_gh: true
+  target_branch: master
+  on:
+    branch: master
