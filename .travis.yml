@@ -11,28 +11,18 @@ install: yarn
 cache: yarn
 # build
 script: yarn build
-# build成功后
-# after_success:
-#   - git clone https://${GITHUB_REF} .temp
-#   - rm -rf .temp/docs
-#   - cp -r docs .temp/docs
-#   - cd .temp
-#   - git config --global user.name "hezf"
-#   - git config --global user.email "287645587@qq.com"
-#   - git add .
-#   - git commit -m "Automatically update from travis-ci"
-#   - git push "https://${GITHUB_TOKEN}@${GITHUB_REF}" master:master
-
-# branches:
-#   only:
-#     - master
-
+# build成功后开始部署，下面是travis-ci提供的一些比较便捷的写法，针对GitHub pages的
 deploy:
   provider: pages
+  # Make sure you have skip_cleanup set to true, otherwise Travis CI will delete all the files created during the build,
+  # which will probably delete what you are trying to upload.
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
+  # 这里需要是true，否则会git push --force，把以前的记录覆盖了
   keep_history: true
+  # 使用GitHub的用户名和邮箱
   committer_from_gh: true
+  # 目标分支
   target_branch: master
   on:
     branch: master
