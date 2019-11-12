@@ -22,7 +22,8 @@ deploy:
   keep_history: true
   # 使用GitHub的用户名和邮箱
   committer_from_gh: true
-  # 目标分支
+  # 目标分支，我们的目标也是master
   target_branch: master
+  # 指定分支，只有指定的分支提交时才会运行脚本
   on:
     branch: master
