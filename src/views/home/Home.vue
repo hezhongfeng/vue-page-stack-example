@@ -5,13 +5,13 @@
         <cube-tab-panel :label="$t('home')" value="0">
           <main-list></main-list>
         </cube-tab-panel>
-        <cube-tab-panel :label="$t('about')" value="3">
+        <cube-tab-panel :label="$t('about')" value="1">
           <about></about>
         </cube-tab-panel>
       </cube-tab-panels>
     </div>
     <div class="h-tabbars">
-      <cube-tab-bar v-model="selectedIndex" @change="changeHandler">
+      <cube-tab-bar v-model="selectedIndex">
         <cube-tab v-for="(item) in tabs" :icon="item.icon" :label="item.label" :value="item.value" :key="item.value"></cube-tab>
       </cube-tab-bar>
     </div>
@@ -40,9 +40,9 @@ export default {
           icon: 'iconfont ' + (this.selectedIndex === '0' ? 'iconhome_fill_light' : 'iconhome_light')
         },
         {
-          value: '3',
+          value: '1',
           label: this.$t('about'),
-          icon: 'iconfont ' + (this.selectedIndex === '3' ? 'iconmy_fill_light' : 'iconmy_light')
+          icon: 'iconfont ' + (this.selectedIndex === '1' ? 'iconmy_fill_light' : 'iconmy_light')
         }
       ];
     }
@@ -65,11 +65,7 @@ export default {
     console.log('Home activated');
   },
   mounted() {},
-  methods: {
-    changeHandler(index) {
-      this.$router.push('/home/' + index);
-    }
-  }
+  methods: {}
 };
 </script>
 
