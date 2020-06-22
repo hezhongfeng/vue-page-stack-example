@@ -13,7 +13,6 @@
           <cube-button @click="onPush">{{$t('detail.push.list')}}</cube-button>
           <cube-button @click="onReplace">{{$t('detail.replace')}}</cube-button>
           <cube-button>{{$t('detail.currentPageNumber')}}{{' '+animatedNumber}}</cube-button>
-          <cube-button>{{$t('detail.currentUserName')}}{{' '+userName}}</cube-button>
         </div>
       </cube-scroll>
     </div>
@@ -74,7 +73,7 @@ export default {
       this.$router.push('/main-detail/' + (Number(this.$route.params.id) + 1));
     },
     onPush() {
-      this.$router.push('/main');
+      this.$router.push('/home/0');
     }
   }
 };

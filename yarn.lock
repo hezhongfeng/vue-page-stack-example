@@ -9945,10 +9945,10 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-page-stack@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-1.4.1.tgz#b6377f00e461bcf2099c2be410b736284b115e8a"
-  integrity sha512-A0Z3g9gbEyXTqq22IDRjlrxv8L4r8mmM7ScwiUdO/+HrrCL4YKucVZI0H36Gis0ROfjM6KGkmcSOslLwqStunQ==
+vue-page-stack@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/vue-page-stack/-/vue-page-stack-1.5.0.tgz#af92986fb8dc10039451a7d7af7d7073eb81fe92"
+  integrity sha512-ji3N1iAWnFcPmGtn5gccMgDe6n5hMmRPFWGv5n7brEeM3U30XOtL4hK2Q5log50A6rHh1ZUsNhEuEIjNHkvdtw==
 
 vue-router@^3.3.4:
   version "3.3.4"
