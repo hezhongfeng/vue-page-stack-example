@@ -135,7 +135,7 @@ export default {
       this.$router.push('/home/0');
     },
     changeLanguage(value) {
-      let map = new Map();
+      const map = new Map();
       map.set('English', 'en');
       map.set('简体中文', 'zh');
       this.$i18n.locale = map.get(value);

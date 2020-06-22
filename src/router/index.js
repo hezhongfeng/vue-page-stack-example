@@ -20,7 +20,7 @@ const routes = [
   { path: '/login', component: Login }
 ];
 
-let router = new Router({
+const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes

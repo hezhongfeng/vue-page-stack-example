@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? 'vue-page-stack-example' : '/',
   assetsDir: 'static',
@@ -9,24 +7,15 @@ module.exports = {
     port: 1234
   },
 
-  chainWebpack: config => {
-    const oneOfsMap = config.module.rule('scss').oneOfs.store;
-    oneOfsMap.forEach(item => {
-      item
-        .use('sass-resources-loader')
-        .loader('sass-resources-loader')
-        .options({
-          resources: [path.resolve(__dirname, './src/common/style/color.scss')]
-        })
-        .end();
-    });
-  },
-
   css: {
     loaderOptions: {
       stylus: {
         'resolve url': true,
-        'import': []
+        import: []
+      },
+      sass: {
+        // 不再需要sass-resources-loader
+        prependData: '@import "@/common/style/color.scss";'
       }
     }
   },

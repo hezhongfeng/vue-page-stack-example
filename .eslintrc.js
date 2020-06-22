@@ -22,8 +22,7 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     // allow async-await
     'generator-star-spacing': 'off',
-    'no-debugger': 'error',
-    'vue/no-use-v-if-with-v-for': 0
+    'no-debugger': 'error'
   },
   parserOptions: {
     parser: 'babel-eslint'
