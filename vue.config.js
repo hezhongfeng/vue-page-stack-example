@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? 'vue-page-stack-example' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-page-stack-example/' : '/',
   assetsDir: 'static',
   productionSourceMap: false,
   outputDir: 'docs',
