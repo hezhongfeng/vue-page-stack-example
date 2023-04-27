@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "core-js": "^3.20.0",
-    "cube-ui": "^1.12.27",
+    "cube-ui": "^1.12.49",
     "gsap": "^2.1.3",
-    "vue": "^2.6.14",
+    "vue": "^2.7.14",
     "vue-i18n": "^8.26.7",
     "vue-page-stack": "^1.5.0",
-    "vue-router": "^3.3.4"
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
@@ -43,7 +43,7 @@
     "sass-resources-loader": "^2.0.1",
     "vue-cli-plugin-cube-ui": "^0.2.5",
     "vue-cli-plugin-i18n": "^0.6.0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.7.14"
   },
   "postcss": {
     "plugins": {

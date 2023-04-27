@@ -1,6 +1,5 @@
 module.exports = {
-  publicPath: './',
-  assetsDir: 'static',
+  publicPath: '/',
   productionSourceMap: false,
   outputDir: 'docs',
   devServer: {
