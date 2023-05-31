@@ -1,18 +1,13 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-const Index = () => import('@/views/index/Index');
-const MainDetail = () => import('@/views/main/MainDetail');
-const Login = () => import('@/views/login/Login');
-const Home = () => import('@/views/home/Home');
+import { createRouter, createWebHashHistory } from 'vue-router';
 
-Vue.use(Router);
+import Index from '../views/index/Index.vue';
+import Home from '../views/home/Home.vue';
+import MainDetail from '../views/main/MainDetail.vue';
+import Login from '../views/login/Login.vue';
 
 const routes = [
-  {
-    path: '/',
-    component: Index
-  },
-  { path: '/home/:tab', component: Home },
+  { path: '/', component: Index },
+  { path: '/home', component: Home },
   {
     path: '/main-detail/:id',
     component: MainDetail
@@ -20,15 +15,10 @@ const routes = [
   { path: '/login', component: Login }
 ];
 
-const router = new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+const router = createRouter({
+  // 4. 内部提供了 history 模式的实现。为了简单起见，我们在这里使用 hash 模式。
+  history: createWebHashHistory(),
   routes
-});
-
-router.beforeEach((to, from, next) => {
-  console.log('beforeEach');
-  next();
 });
 
 export default router;

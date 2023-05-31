@@ -1,72 +1,58 @@
 <template>
   <div class="c-home">
     <div class="h-body">
-      <cube-tab-panels v-model="selectedIndex">
-        <cube-tab-panel :label="$t('home')" value="0">
-          <main-list></main-list>
-        </cube-tab-panel>
-        <cube-tab-panel :label="$t('about')" value="1">
-          <about></about>
-        </cube-tab-panel>
-      </cube-tab-panels>
+      <main-list v-show="selectedIndex === '0'"></main-list>
+      <about v-show="selectedIndex === '1'"></about>
     </div>
     <div class="h-tabbars">
-      <cube-tab-bar v-model="selectedIndex">
-        <cube-tab v-for="(item) in tabs" :icon="item.icon" :label="item.label" :value="item.value" :key="item.value"></cube-tab>
-      </cube-tab-bar>
+      <van-tabbar v-model="selectedIndex">
+        <van-tabbar-item v-for="item in tabs" :name="item.value" :key="item.value" :icon="item.icon">{{
+          item.label
+        }}</van-tabbar-item>
+      </van-tabbar>
     </div>
   </div>
 </template>
 
-<script>
-import MainList from '@/views/main/MainList';
-import About from '@/views/about/About';
+<script setup>
+import { ref, onActivated, computed } from 'vue';
+import { useRoute, onBeforeRouteUpdate } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+import MainList from '../main/MainList.vue';
+import About from '../about/About.vue';
 
-export default {
-  name: 'Home',
-  components: { MainList, About },
-  props: {},
-  data() {
-    return {
-      selectedIndex: '0'
-    };
-  },
-  computed: {
-    tabs() {
-      return [
-        {
-          value: '0',
-          label: this.$t('home'),
-          icon: 'iconfont ' + (this.selectedIndex === '0' ? 'iconhome_fill_light' : 'iconhome_light')
-        },
-        {
-          value: '1',
-          label: this.$t('about'),
-          icon: 'iconfont ' + (this.selectedIndex === '1' ? 'iconmy_fill_light' : 'iconmy_light')
-        }
-      ];
+const route = useRoute();
+
+const selectedIndex = ref('0');
+
+const { t } = useI18n();
+
+onActivated(() => {
+  console.log('Home activated');
+});
+
+onBeforeRouteUpdate(to => {
+  console.log('beforeRouteUpdate');
+  selectedIndex.value = to.params.tab;
+});
+
+const tabs = computed(() => {
+  return [
+    {
+      value: '0',
+      label: t('home'),
+      icon: selectedIndex.value === '0' ? 'wap-home' : 'wap-home-o'
+    },
+    {
+      value: '1',
+      label: t('about'),
+      icon: selectedIndex.value === '1' ? 'manager' : 'manager-o'
     }
-  },
-  watch: {
-    $route(to, from) {
-      console.log('$route change');
-    }
-  },
-  beforeRouteUpdate(to, from, next) {
-    console.log('beforeRouteUpdate');
-    this.selectedIndex = to.params.tab;
-    next();
-  },
-  created() {
-    console.log('Home created');
-    this.selectedIndex = this.$route.params.tab || '0';
-  },
-  activated() {
-    console.log('Home activated');
-  },
-  mounted() {},
-  methods: {}
-};
+  ];
+});
+
+console.log('Home created');
+selectedIndex.value = route.params.tab || '0';
 </script>
 
 <style lang="scss">
@@ -74,34 +60,6 @@ export default {
   height: 100%;
   .h-body {
     height: calc(100% - 50px);
-    .cube-tab-panels,
-    .cube-tab-panels-group,
-    .cube-tab-panel {
-      height: 100%;
-    }
-    .cube-tab-panels-group {
-      transition: none;
-    }
-  }
-  .h-tabbars {
-    height: 50px;
-    .cube-tab-bar {
-      border-top: 1px #9999994f solid;
-      height: 100%;
-      .cube-tab {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        i {
-          font-size: 20px;
-          margin-bottom: 3px;
-        }
-        &.cube-tab_active {
-          color: $color-primary;
-        }
-      }
-    }
   }
 }
 </style>

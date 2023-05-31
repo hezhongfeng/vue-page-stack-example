@@ -6,44 +6,37 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MainItem',
-  components: {},
-  props: {
-    index: {
-      type: Number
-    },
-    item: {
-      type: Object,
-      default() {
-        return {};
-      }
-    }
+<script setup>
+import { computed, ref } from 'vue';
+
+const props = defineProps({
+  index: {
+    type: Number
   },
-  data() {
-    return {
-      isAnimationend: false
-    };
-  },
-  computed: {
-    styleObject() {
-      return {
-        'background-color': this.item.background || '',
-        animation: this.isAnimationend ? 'none' : 'show ' + ((this.index + 1) * 0.2 + 0.1) + 's 1'
-      };
-    }
-  },
-  watch: {},
-  created() {},
-  methods: {
-    onClick() {
-      this.$emit('click');
-    },
-    animationend() {
-      this.isAnimationend = true;
+  item: {
+    type: Object,
+    default() {
+      return {};
     }
   }
+});
+
+const emit = defineEmits(['click']);
+
+const isAnimationend = ref(false);
+
+const styleObject = computed(() => {
+  return {
+    'background-color': props.item.background || '',
+    animation: isAnimationend.value ? 'none' : 'show ' + ((props.index + 1) * 0.2 + 0.1) + 's 1'
+  };
+});
+
+const onClick = () => {
+  emit('click');
+};
+const animationend = () => {
+  isAnimationend.value = true;
 };
 </script>
 

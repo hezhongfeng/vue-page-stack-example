@@ -2,86 +2,75 @@
   <div class="main-detail">
     <stack-header></stack-header>
     <div class="p-scroll-wrap">
-      <cube-scroll ref="scroll">
-        <div class="desc-wrap">
-          <div class="desc">{{$t('detail.desc')}}</div>
-        </div>
-        <div class="form">
-          <cube-input v-model="textValue" :placeholder="$t('detail.placeholder')"></cube-input>
-          <cube-button @click="onPushSame">{{$t('detail.push.same')}}</cube-button>
-          <cube-button @click="onLogin">{{$t('detail.push.login')}}</cube-button>
-          <cube-button @click="onPush">{{$t('detail.push.list')}}</cube-button>
-          <cube-button @click="onReplace">{{$t('detail.replace')}}</cube-button>
-          <cube-button>{{$t('detail.currentPageNumber')}}{{' '+animatedNumber}}</cube-button>
-        </div>
-      </cube-scroll>
+      <div class="desc-wrap">
+        <div class="desc">{{ t('detail.desc') }}</div>
+      </div>
+      <div class="form">
+        <van-field v-model="textValue" :placeholder="t('detail.placeholder')" />
+        <van-button @click="onPushSame" type="primary" block>{{ t('detail.push.same') }}</van-button>
+        <van-button @click="onLogin" type="primary" block>{{ t('detail.push.login') }}</van-button>
+        <van-button @click="onPush" type="primary" block>{{ t('detail.push.list') }}</van-button>
+        <van-button @click="onReplace" type="primary" block>{{ t('detail.replace') }}</van-button>
+        <van-button type="primary" block>{{ t('detail.currentPageNumber') }}</van-button>
+      </div>
     </div>
   </div>
 </template>
 
-<script>
-import StackHeader from '@/components/header/StackHeader.vue';
-import { TweenLite } from 'gsap/TweenMax';
+<script setup>
+import { ref, computed, onMounted, onActivated } from 'vue';
+import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
+import { useI18n } from 'vue-i18n';
+import StackHeader from './StackHeader.vue';
 
-export default {
-  name: 'MainDetail',
-  components: { StackHeader },
-  props: {},
-  data() {
-    return {
-      userName: '',
-      textValue: '',
-      pageIndex: 0
-    };
-  },
-  created() {
-    console.log('detail created');
-    TweenLite.to(this, 0.7, { pageIndex: Number(this.$route.params.id) });
-  },
-  mounted() {
-    console.log('detail mounted');
-  },
-  activated() {
-    console.log('detail activated');
-    if (window.sessionStorage.username) {
-      this.userName = window.sessionStorage.username;
-    }
-    if (this.textValue) {
-      this.textValue = this.textValue + ' + activated';
-    }
-  },
-  beforeRouteUpdate(to, from, next) {
-    TweenLite.to(this, 0.7, { pageIndex: Number(to.params.id) });
-    next();
-  },
-  computed: {
-    animatedNumber() {
-      return this.pageIndex.toFixed(1);
-    }
-  },
-  methods: {
-    back() {
-      this.$router.back();
-    },
-    onLogin() {
-      this.$router.push('/login');
-    },
-    onReplace() {
-      this.$router.replace('/main-detail/' + (Number(this.$route.params.id) + 1));
-    },
-    onPushSame() {
-      this.$router.push('/main-detail/' + (Number(this.$route.params.id) + 1));
-    },
-    onPush() {
-      this.$router.push('/home/0');
-    }
+const { t } = useI18n();
+
+const router = useRouter();
+const route = useRoute();
+
+const userName = ref('');
+const textValue = ref('');
+const pageIndex = ref(0);
+
+onMounted(() => {
+  console.log('detail mounted');
+});
+
+onActivated(() => {
+  console.log('detail activated');
+  if (window.sessionStorage.username) {
+    userName.value = window.sessionStorage.username;
   }
+  if (textValue.value) {
+    textValue.value = textValue.value + ' + activated';
+  }
+});
+
+onBeforeRouteUpdate(() => {});
+
+// eslint-disable-next-line no-unused-vars
+const animatedNumber = computed(() => {
+  return pageIndex.value.toFixed(1);
+});
+
+const onLogin = () => {
+  router.push('/login');
+};
+const onReplace = () => {
+  router.replace('/main-detail/' + (Number(route.params.id) + 1));
+};
+const onPushSame = () => {
+  router.push('/main-detail/' + (Number(route.params.id) + 1));
+};
+const onPush = () => {
+  router.push('/home');
 };
 </script>
 
 <style lang="scss">
 .main-detail {
   min-height: 100%;
+  padding-top: 45px;
   .p-scroll-wrap {
     height: calc(100% - 90px);
   }
@@ -93,11 +82,8 @@ export default {
   }
   .form {
     padding: 0 10px 10px 10px;
-    .cube-input {
-      margin-bottom: 10px;
-    }
-    .cube-btn {
-      margin-bottom: 10px;
+    > * {
+      margin-top: 10px;
     }
   }
   .index {
