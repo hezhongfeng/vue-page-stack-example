@@ -1,12 +1,10 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? 'vue-page-stack-example' : '/',
-  assetsDir: 'static',
+  publicPath: '/',
   productionSourceMap: false,
   outputDir: 'docs',
   devServer: {
     port: 1234
   },
-
   css: {
     loaderOptions: {
       stylus: {
