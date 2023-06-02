@@ -15,14 +15,6 @@
           width="1024px"
           version="1.1"
         >
-          <metadata id="metadata282487">
-            <rdf:rdf>
-              <cc:work rdf:about>
-                <dc:format>image/svg+xml</dc:format>
-                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-              </cc:work>
-            </rdf:rdf>
-          </metadata>
           <defs id="defs282485" />
           <g id="logo-group">
             <image
@@ -36,111 +28,230 @@
             />
             <g
               id="title"
-              style="font-style:normal;font-weight:500;font-size:72px;line-height:1;font-family:'Raleway Medium Alt1';font-variant-ligatures:none;text-align:center;text-anchor:middle"
+              style="
+                font-style: normal;
+                font-weight: 500;
+                font-size: 72px;
+                line-height: 1;
+                font-family: 'Raleway Medium Alt1';
+                font-variant-ligatures: none;
+                text-align: center;
+                text-anchor: middle;
+              "
               aria-label="VUE-STACK"
             >
               <path
                 id="path282489"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 310.85281,-51.12 17.136,41.976 3.24,-7.416 -13.536,-34.56 z m 40.608,0 -16.848,42.984 -3.168,7.416 0.36,0.72 h 5.616 l 20.88,-51.12 z"
                 transform="translate(0 464.77288) translate(56.45899809999986 -14.051199999999987) scale(2.26) translate(-310.85281 51.12)"
               />
               <path
                 id="path282491"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 374.19031,-11.592 c -1.152,-1.8 -2.016,-3.888 -2.52,-6.264 -0.504,-2.376 -0.72,-4.824 -0.72,-7.416 V -51.12 h -6.48 v 25.848 c 0,3.312 0.36,6.48 1.08,9.576 0.72,3.096 1.944,5.832 3.672,8.208 1.728,2.376 3.96,4.32 6.768,5.688 1.944,1.08 4.32,1.728 6.984,2.016 v -5.904 c -1.584,-0.288 -2.952,-0.792 -4.104,-1.44 -1.944,-1.152 -3.528,-2.592 -4.68,-4.464 z m 27.36,-39.528 v 25.848 c 0,2.52 -0.288,4.896 -0.72,7.272 -0.504,2.376 -1.368,4.464 -2.52,6.336 -1.152,1.872 -2.736,3.312 -4.68,4.464 -1.152,0.72 -2.52,1.152 -4.032,1.44 v 5.976 c 2.52,-0.288 4.752,-0.936 6.696,-1.872 2.736,-1.368 5.04,-3.24 6.768,-5.616 1.728,-2.304 2.952,-5.04 3.744,-8.136 0.792,-3.096 1.224,-6.408 1.224,-9.864 V -51.12 Z"
                 transform="translate(0 464.77288) translate(177.63454809999993 -14.051199999999987) scale(2.26) translate(-364.47031 51.12)"
               />
               <path
                 id="path282493"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 426.09219,-45.36 h 27.576 v -5.76 h -34.056 v 15.84 h 6.48 z m -6.48,39.6 V 0 h 34.704 v -5.76 z m 6.48,-17.64 h 23.976 v -5.4 h -30.456 v 16.56 h 6.48 z"
                 transform="translate(0 464.77288) translate(302.25519689999993 -14.051199999999987) scale(2.26) translate(-419.61219 51.12)"
               />
               <path
                 id="path282495"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 461.69394,-16.776 h 21.24 v -5.76 h -21.24 z"
                 transform="translate(0 464.77288) translate(397.3599518999999 50.54864) scale(2.26) translate(-461.69394 22.536)"
               />
               <path
                 id="path282497"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 523.74556,-40.392 3.024,-5.256 c -2.16,-1.728 -4.68,-3.168 -7.416,-4.248 -2.808,-1.008 -5.904,-1.584 -9.36,-1.584 -2.664,0 -5.112,0.36 -7.344,1.008 -2.304,0.648 -4.248,1.584 -5.832,2.88 -1.656,1.296 -2.952,2.88 -3.816,4.752 -0.936,1.872 -1.368,4.032 -1.368,6.48 0,2.016 0.288,3.744 1.008,5.184 0.648,1.44 1.656,2.664 2.952,3.672 1.296,1.008 2.952,1.872 4.968,2.592 1.944,0.72 4.248,1.44 6.84,2.016 2.304,0.576 4.392,1.152 6.264,1.728 1.872,0.576 3.384,1.152 4.68,1.872 1.224,0.72 2.16,1.584 2.808,2.592 0.648,1.008 1.008,2.16 1.008,3.6 0,2.592 -1.008,4.536 -3.024,5.832 -2.016,1.296 -4.896,1.944 -8.496,1.944 -2.016,0 -3.888,-0.144 -5.688,-0.576 -1.8,-0.432 -3.456,-0.936 -5.04,-1.584 -1.584,-0.648 -2.952,-1.368 -4.176,-2.232 -1.224,-0.792 -2.232,-1.584 -2.952,-2.448 l -3.096,5.472 c 2.88,2.376 6.048,4.176 9.576,5.4 3.528,1.224 7.272,1.8 11.232,1.8 2.592,0 5.04,-0.216 7.344,-0.792 2.232,-0.576 4.176,-1.44 5.832,-2.592 1.656,-1.152 2.952,-2.664 3.96,-4.464 0.936,-1.8 1.44,-3.96 1.44,-6.408 0,-2.304 -0.432,-4.248 -1.224,-5.832 -0.792,-1.584 -1.944,-2.88 -3.456,-4.032 -1.512,-1.08 -3.312,-2.016 -5.472,-2.736 -2.16,-0.72 -4.536,-1.44 -7.128,-2.016 -2.304,-0.504 -4.32,-1.008 -5.976,-1.512 -1.728,-0.432 -3.096,-1.008 -4.248,-1.656 -1.152,-0.648 -1.944,-1.44 -2.448,-2.376 -0.576,-0.864 -0.792,-2.016 -0.792,-3.456 0,-2.592 0.864,-4.608 2.736,-6.12 1.872,-1.44 4.752,-2.232 8.784,-2.232 1.512,0 2.952,0.216 4.392,0.504 1.44,0.288 2.736,0.72 3.96,1.224 1.152,0.504 2.232,1.08 3.24,1.656 0.936,0.648 1.728,1.296 2.304,1.944 z"
                 transform="translate(0 464.77288) translate(460.6300530999998 -14.864799999999981) scale(2.26) translate(-489.68956 51.48)"
               />
               <path
                 id="path282499"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 550.34056,0 h 6.48 v -38.88 h -6.48 z m -17.64,-51.12 v 5.76 h 41.76 v -5.76 z"
                 transform="translate(0 464.77288) translate(557.8349131 -14.051199999999987) scale(2.26) translate(-532.70056 51.12)"
               />
               <path
                 id="path282501"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 600.80356,-44.136 -2.808,7.632 6.48,16.488 h -12.816 l -1.944,5.04 h 16.2 L 611.96356,0 h 6.912 z m -2.808,-6.984 h -5.472 L 571.57156,0 h 6.624 l 17.064,-43.632 z"
                 transform="translate(0 464.77288) translate(645.6833731 -14.051199999999987) scale(2.26) translate(-571.57156 51.12)"
               />
               <path
                 id="path282503"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 628.26031,-32.76 c 0.72,-2.376 1.872,-4.536 3.384,-6.408 1.44,-1.872 3.312,-3.456 5.472,-4.608 2.16,-1.152 4.68,-1.8 7.56,-1.8 1.296,0 2.592,0.144 3.96,0.432 1.296,0.288 2.592,0.792 3.888,1.44 1.224,0.72 2.448,1.584 3.528,2.664 1.08,1.152 2.016,2.52 2.808,4.104 l 5.112,-3.312 c -1.584,-3.312 -4.032,-5.976 -7.272,-8.064 -3.312,-2.016 -7.2,-3.096 -11.736,-3.096 -3.888,0 -7.272,0.792 -10.296,2.232 -3.096,1.512 -5.616,3.456 -7.704,5.904 -2.088,2.448 -3.672,5.184 -4.752,8.208 -0.792,2.16 -1.224,4.32 -1.44,6.408 h 6.552 c 0.216,-1.368 0.504,-2.736 0.936,-4.104 z m 31.248,18.36 c -0.72,1.584 -1.656,2.952 -2.808,4.104 -1.152,1.152 -2.376,2.088 -3.6,2.808 -1.368,0.72 -2.664,1.296 -4.104,1.584 -1.44,0.36 -2.808,0.504 -4.104,0.504 -2.592,0 -4.896,-0.504 -7.056,-1.656 -2.16,-1.08 -4.032,-2.592 -5.616,-4.464 -1.656,-1.872 -2.88,-3.96 -3.744,-6.408 -0.576,-1.512 -0.936,-3.024 -1.152,-4.68 h -6.552 c 0.288,2.16 0.792,4.248 1.584,6.336 1.152,3.168 2.808,5.976 4.968,8.424 2.16,2.448 4.68,4.464 7.632,5.976 2.88,1.584 6.12,2.304 9.648,2.304 1.944,0 3.96,-0.216 6.048,-0.792 2.016,-0.504 3.96,-1.224 5.832,-2.304 1.872,-0.936 3.528,-2.232 4.968,-3.672 1.44,-1.44 2.592,-3.168 3.456,-5.112 z"
                 transform="translate(0 464.77288) translate(756.8770681 -14.702079999999988) scale(2.26) translate(-620.77231 51.408)"
               />
               <path
                 id="path282505"
-                style="font-style: normal; font-weight: 500; font-size: 72px; line-height: 1; font-family: &quot;Raleway Medium Alt1&quot;; font-variant-ligatures: none; text-align: center; text-anchor: middle; fill: rgb(65, 184, 131);"
+                style="
+                  font-style: normal;
+                  font-weight: 500;
+                  font-size: 72px;
+                  line-height: 1;
+                  font-family: 'Raleway Medium Alt1';
+                  font-variant-ligatures: none;
+                  text-align: center;
+                  text-anchor: middle;
+                  fill: rgb(65, 184, 131);
+                "
                 d="m 679.49844,-51.048 h -6.48 v 26.784 l 6.48,-6.984 z m 12.816,22.464 20.52,-22.536 h -6.984 l -26.352,28.296 -6.48,6.912 V 0 h 6.48 v -15.624 l 8.856,-9.216 18.576,24.84 h 7.056 z"
                 transform="translate(0 464.77288) translate(874.9533219000002 -14.051199999999987) scale(2.26) translate(-673.01844 51.12)"
               />
             </g>
             <g
               id="tagline"
-              style="font-style:oblique;font-weight:600;font-size:32px;line-height:1;font-family:Raleway;font-variant-ligatures:none;text-align:center;text-anchor:middle"
+              style="
+                font-style: oblique;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 1;
+                font-family: Raleway;
+                font-variant-ligatures: none;
+                text-align: center;
+                text-anchor: middle;
+              "
             />
           </g>
         </svg>
       </div>
     </div>
     <div class="content">
-      <p class="explain">{{ $t('explain') }}</p>
-      <p class="version">v1.0.0</p>
+      <p class="explain">{{ t('explain') }}</p>
+      <p class="version">v3.0.0</p>
     </div>
     <div class="form">
-      <cube-button @click="onExperience">{{ $t('quickStart') }}</cube-button>
+      <van-button type="primary" @click="onExperience" block>{{ t('quickStart') }}</van-button>
     </div>
     <div class="change-language">
-      <div class="language-title">{{$t('language')}}</div>
-      <cube-select v-model="value" :options="options" @change="changeLanguage"></cube-select>
+      <van-field v-model="language" is-link readonly name="picker" :label="t('language')" @click="showPicker = true" />
+      <van-popup v-model:show="showPicker" position="bottom">
+        <van-picker
+          :columns="columns"
+          @confirm="onConfirm"
+          @cancel="showPicker = false"
+          :confirm-button-text="t('confirm-button-text')"
+          :cancel-button-text="t('cancel-button-text')"
+        />
+      </van-popup>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Index',
-  components: {},
-  props: {},
-  data() {
-    return {
-      value: '简体中文',
-      options: ['简体中文', 'English']
-    };
-  },
-  computed: {},
-  watch: {},
-  created() {},
-  methods: {
-    onExperience() {
-      this.$router.push('/home/0');
-    },
-    changeLanguage(value) {
-      const map = new Map();
-      map.set('English', 'en');
-      map.set('简体中文', 'zh');
-      this.$i18n.locale = map.get(value);
-    }
-  }
+<script setup>
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { i18n, setI18nLanguage } from '../../i18n';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const { t } = useI18n();
+
+const language = ref('简体中文');
+
+const showPicker = ref(false);
+
+const columns = [
+  { text: '简体中文', value: 'zh' },
+  { text: 'English', value: 'en' }
+];
+
+const onConfirm = ({ selectedOptions }) => {
+  language.value = selectedOptions[0]?.text;
+  showPicker.value = false;
+  setI18nLanguage(i18n, selectedOptions[0]?.value);
+};
+
+const onExperience = () => {
+  console.log('开始体验 onExperience');
+  router.push('/home');
 };
 </script>
 

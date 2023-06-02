@@ -1,15 +1,16 @@
-import Vue from 'vue';
-import './cube-ui';
-import App from './App.vue';
+import { createApp } from 'vue';
 import router from './router';
+import { i18n } from './i18n';
+import App from './App.vue';
+
 import VuePageStack from 'vue-page-stack';
-import i18n from './i18n';
 
-Vue.config.productionTip = false;
-Vue.use(VuePageStack, { router });
+const app = createApp(App);
 
-new Vue({
-  router,
-  i18n,
-  render: h => h(App)
-}).$mount('#app');
+app.use(router);
+
+app.use(VuePageStack, { router });
+
+app.use(i18n);
+
+app.mount('#app');

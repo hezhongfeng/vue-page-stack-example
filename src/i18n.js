@@ -1,23 +1,46 @@
-import Vue from 'vue';
-import VueI18n from 'vue-i18n';
+import { createI18n } from 'vue-i18n';
 
-Vue.use(VueI18n);
+export const SUPPORT_LOCALES = ['en', 'zh'];
 
-function loadLocaleMessages () {
-  const locales = require.context('./locales', true, /[A-Za-z0-9-_,\s]+\.json$/i);
-  const messages = {};
-  locales.keys().forEach(key => {
-    const matched = key.match(/([A-Za-z0-9-_]+)\./i);
-    if (matched && matched.length > 1) {
-      const locale = matched[1];
-      messages[locale] = locales(key);
-    }
-  });
-  return messages;
+import en from './locales/en.json';
+import zh from './locales/zh.json';
+
+export function getLocale(i18n) {
+  return i18n.mode === 'legacy' ? i18n.global.locale : i18n.global.locale.value;
 }
 
-export default new VueI18n({
-  locale: process.env.VUE_APP_I18N_LOCALE || 'en',
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages: loadLocaleMessages()
+export function setLocale(i18n, locale) {
+  if (i18n.mode === 'legacy') {
+    i18n.global.locale = locale;
+  } else {
+    i18n.global.locale.value = locale;
+  }
+}
+
+export function setupI18n(options = { locale: 'zh' }) {
+  const i18n = createI18n(options);
+  setI18nLanguage(i18n, options.locale);
+  return i18n;
+}
+
+export function setI18nLanguage(i18n, locale) {
+  setLocale(i18n, locale);
+  /**
+   * NOTE:
+   * If you need to specify the language setting for headers, such as the `fetch` API, set it here.
+   * The following is an example for axios.
+   *
+   * axios.defaults.headers.common['Accept-Language'] = locale
+   */
+  document.querySelector('html').setAttribute('lang', locale);
+}
+
+export const i18n = setupI18n({
+  legacy: false,
+  locale: 'zh',
+  // fallbackLocale: 'zh',
+  messages: {
+    zh,
+    en
+  }
 });
