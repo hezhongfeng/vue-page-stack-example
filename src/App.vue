@@ -6,7 +6,20 @@
   </router-view>
 </template>
 
-<script setup></script>
+<script setup>
+import { watch } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+watch(route, to => {
+  if (to.params['stack-key-dir'] === 'forward') {
+    console.log('forward');
+  } else {
+    console.log('back');
+  }
+});
+</script>
 
 <style lang="scss">
 :root {
