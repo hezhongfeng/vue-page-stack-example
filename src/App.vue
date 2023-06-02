@@ -1,5 +1,5 @@
 <template>
-  <router-view v-slot="{ Component }" style="position: absolute; width: 100%">
+  <router-view v-slot="{ Component }">
     <vue-page-stack>
       <component :is="Component" :key="$route.fullPath"></component>
     </vue-page-stack>

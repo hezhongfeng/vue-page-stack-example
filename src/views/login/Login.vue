@@ -226,7 +226,7 @@ const password = ref('');
 const router = useRouter();
 
 const onLogin = () => {
-  window.sessionStorage.username = userName.value || 'hezf';
+  // login success
   router.back();
 };
 </script>

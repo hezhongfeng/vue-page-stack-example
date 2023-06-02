@@ -249,8 +249,6 @@ const onConfirm = ({ selectedOptions }) => {
   setI18nLanguage(i18n, selectedOptions[0]?.value);
 };
 
-//
-
 const onExperience = () => {
   console.log('开始体验 onExperience');
   router.push('/home');

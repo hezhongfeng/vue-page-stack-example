@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onActivated } from 'vue';
+import { ref, onMounted, onActivated } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import StackHeader from './StackHeader.vue';
@@ -30,7 +30,6 @@ const route = useRoute();
 
 const userName = ref('');
 const textValue = ref('');
-const pageIndex = ref(0);
 
 onMounted(() => {
   console.log('detail mounted');
@@ -47,11 +46,6 @@ onActivated(() => {
 });
 
 onBeforeRouteUpdate(() => {});
-
-// eslint-disable-next-line no-unused-vars
-const animatedNumber = computed(() => {
-  return pageIndex.value.toFixed(1);
-});
 
 const onLogin = () => {
   router.push('/login');
