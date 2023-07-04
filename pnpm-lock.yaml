@@ -14,8 +14,8 @@ dependencies:
     specifier: ^9.2.2
     version: 9.2.2(vue@3.3.4)
   vue-page-stack:
-    specifier: ^3.0.0
-    version: registry.npmjs.org/vue-page-stack@3.0.0(vue-router@4.2.2)(vue@3.3.4)
+    specifier: ^3.0.1-beta2
+    version: registry.npmjs.org/vue-page-stack@3.0.1-beta2(vue-router@4.2.2)(vue@3.3.4)
   vue-router:
     specifier: ^4.2.2
     version: registry.npmjs.org/vue-router@4.2.2(vue@3.3.4)
@@ -4237,11 +4237,11 @@ packages:
       fsevents: registry.npmjs.org/fsevents@2.3.2
     dev: true
 
-  registry.npmjs.org/vue-page-stack@3.0.0(vue-router@4.2.2)(vue@3.3.4):
-    resolution: {integrity: sha512-VvUMOSjJaYzBo7lLy2KE87nmnW71SAoywlDYvQgXeE3TJDhnnTIvsNhxep9+jgyQ3Os2Bd7rae7pYkeNc+WgVg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vue-page-stack/-/vue-page-stack-3.0.0.tgz}
-    id: registry.npmjs.org/vue-page-stack/3.0.0
+  registry.npmjs.org/vue-page-stack@3.0.1-beta2(vue-router@4.2.2)(vue@3.3.4):
+    resolution: {integrity: sha512-Fu/j8FQvxdEy4X0H9j3EFTiuEPsSWZYdd9tq2fB4rJ7HZUrIWdzGUNVwU8JiV06+ARCEMoawUPoOIAxaeMd2BQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/vue-page-stack/-/vue-page-stack-3.0.1-beta2.tgz}
+    id: registry.npmjs.org/vue-page-stack/3.0.1-beta2
     name: vue-page-stack
-    version: 3.0.0
+    version: 3.0.1-beta2
     peerDependencies:
       vue: ^3.3.4
       vue-router: ^4.2.2

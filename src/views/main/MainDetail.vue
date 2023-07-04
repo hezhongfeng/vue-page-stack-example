@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onActivated } from 'vue';
+import { ref, onMounted, onActivated, onBeforeUnmount, onUnmounted, onDeactivated } from 'vue';
 import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import StackHeader from './StackHeader.vue';
@@ -31,8 +31,20 @@ const route = useRoute();
 const userName = ref('');
 const textValue = ref('');
 
+onBeforeUnmount(() => {
+  console.log('detail onBeforeUnmount ' + textValue.value);
+});
+
+onUnmounted(() => {
+  console.log('detail onUnmounted ' + textValue.value);
+});
+
+onDeactivated(() => {
+  console.log('detail onDeactivated ' + textValue.value);
+});
+
 onMounted(() => {
-  console.log('detail mounted');
+  console.log('detail mounted ' + textValue.value);
 });
 
 onActivated(() => {
