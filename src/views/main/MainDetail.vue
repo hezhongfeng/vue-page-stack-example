@@ -81,9 +81,9 @@ const onPush = () => {
     height: calc(100% - 90px);
   }
   .desc-wrap {
-    padding: 10px;
-    line-height: 1.5;
-    font-size: 14px;
+    padding: 20px 10px 10px 10px;
+    line-height: 2;
+    font-size: 16px;
     color: #333;
   }
   .form {
