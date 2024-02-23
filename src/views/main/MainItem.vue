@@ -1,7 +1,7 @@
 <template>
   <div class="main-item" :style="styleObject" @click="onClick" @animationend="animationend">
     <div class="content">
-      <div class="message-wrap"></div>
+      <div class="message-wrap">{{ index }}</div>
     </div>
   </div>
 </template>
@@ -48,9 +48,12 @@ const animationend = () => {
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
   .content {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .message-wrap {
       line-height: 1.5;
-      font-size: 15px;
+      font-size: 35px;
       color: #333;
     }
   }

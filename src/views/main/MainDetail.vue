@@ -11,7 +11,7 @@
         <van-button @click="onLogin" type="primary" block>{{ t('detail.push.login') }}</van-button>
         <van-button @click="onPush" type="primary" block>{{ t('detail.push.list') }}</van-button>
         <van-button @click="onReplace" type="primary" block>{{ t('detail.replace') }}</van-button>
-        <van-button type="primary" block>{{ t('detail.currentPageNumber') }}</van-button>
+        <van-button type="primary" block>{{ t('detail.currentPageNumber') + ' ' + route.params.id }}</van-button>
       </div>
     </div>
   </div>
