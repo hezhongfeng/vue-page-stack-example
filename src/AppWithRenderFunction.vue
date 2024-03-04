@@ -1,44 +1,23 @@
 <script>
 import { ref, h, Transition } from 'vue';
 import { RouterView } from 'vue-router';
-// import { VuePageStackFunction } from 'vue-page-stack';
-import { VuePageStack } from '../../vue-page-stack/dist/vue-page-stack.es';
-
-// const transitionName = ref('forward');
-
-// const onBack = () => {
-//   transitionName.value = 'back';
-// };
-
-// const onForward = () => {
-//   transitionName.value = 'forward';
-// };
+import { VuePageStack } from 'vue-page-stack';
+// import { VuePageStack } from '../../vue-page-stack/dist/vue-page-stack.es';
+import { useRoute } from 'vue-router';
 
 export default {
   setup() {
     const transitionName = ref('forward');
-    // const count = ref(1);
-    // const onBack = () => {
-    //   // console.log('back');
-    //   count.value = count.value + 1;
-    //   console.log('back' + count.value);
-    //   // transitionName.value = 'back';
-    // };
-
-    // const onForward = () => {
-    //   transitionName.value = 'forward';
-    // };
-    // return () => {
-    //   return [h('main', null, [h(RouterView, { onClick: onBack }, ({ Component }) => Component)])];
-    // };
+    const route = useRoute();
     return () => {
       return h(RouterView, { class: 'router-view-c' }, ({ Component }) =>
         h(
           Transition,
           {
-            name: transitionName.value
+            name: transitionName.value,
+            key: route.fullPath
           },
-          () => h(VuePageStack, {}, Component)
+          () => h(VuePageStack, Component)
         )
       );
     };

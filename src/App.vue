@@ -1,35 +1,19 @@
 <template>
   <router-view v-slot="{ Component }">
-    <transition :name="transitionName">
-      <keep-alive>
-        <component :is="Component" :key="$route.fullPath" class="router-view-c"></component>
-      </keep-alive>
-    </transition>
+    <vue-page-stack @back="onBack" @forward="onForward">
+      <component :is="Component" :key="$route.fullPath"></component>
+    </vue-page-stack>
   </router-view>
 </template>
 
-<!-- <template>
-  <router-view v-slot="{ Component }">
-    <transition :name="transitionName">
-      <vue-page-stack @back="onBack" @forward="onForward">
-        <component :is="Component" :key="$route.fullPath" class="router-view-c"></component>
-      </vue-page-stack>
-    </transition>
-  </router-view>
-</template> -->
-
 <script setup>
-import { ref } from 'vue';
+const onBack = () => {
+  console.log('back');
+};
 
-const transitionName = ref('forward');
-
-// const onBack = () => {
-//   transitionName.value = 'back';
-// };
-
-// const onForward = () => {
-//   transitionName.value = 'forward';
-// };
+const onForward = () => {
+  console.log('forward');
+};
 </script>
 
 <style lang="scss">
@@ -54,30 +38,5 @@ const transitionName = ref('forward');
       transform: translateY(0px);
     }
   }
-}
-
-.router-view-c {
-  position: absolute;
-  transition: opacity 0.4s, transform 0.4s;
-  width: 100%;
-}
-
-.forward-enter-from {
-  opacity: 0;
-  transform: translateX(100%);
-}
-
-.back-enter-from {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-.forward-leave-to {
-  opacity: 0;
-  transform: translateX(-100%);
-}
-.back-leave-to {
-  opacity: 0;
-  transform: translateX(100%);
 }
 </style>
