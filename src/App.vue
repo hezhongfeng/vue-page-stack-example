@@ -1,24 +1,19 @@
 <template>
   <router-view v-slot="{ Component }">
-    <vue-page-stack>
+    <vue-page-stack @back="onBack" @forward="onForward">
       <component :is="Component" :key="$route.fullPath"></component>
     </vue-page-stack>
   </router-view>
 </template>
 
 <script setup>
-import { watch } from 'vue';
-import { useRoute } from 'vue-router';
+const onBack = () => {
+  console.log('back');
+};
 
-const route = useRoute();
-
-watch(route, to => {
-  if (to.params['stack-key-dir'] === 'forward') {
-    console.log('forward');
-  } else {
-    console.log('back');
-  }
-});
+const onForward = () => {
+  console.log('forward');
+};
 </script>
 
 <style lang="scss">
@@ -27,6 +22,7 @@ watch(route, to => {
   --van-font-size-md: 16px;
 }
 #app {
+  position: relative;
   height: 100%;
   background-color: rgb(247, 247, 250);
   @keyframes show {

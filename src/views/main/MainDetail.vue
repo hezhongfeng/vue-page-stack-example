@@ -11,7 +11,7 @@
         <van-button @click="onLogin" type="primary" block>{{ t('detail.push.login') }}</van-button>
         <van-button @click="onPush" type="primary" block>{{ t('detail.push.list') }}</van-button>
         <van-button @click="onReplace" type="primary" block>{{ t('detail.replace') }}</van-button>
-        <van-button type="primary" block>{{ t('detail.currentPageNumber') }}</van-button>
+        <van-button type="primary" block>{{ t('detail.currentPageNumber') + ' ' + route.params.id }}</van-button>
       </div>
     </div>
   </div>
@@ -81,9 +81,9 @@ const onPush = () => {
     height: calc(100% - 90px);
   }
   .desc-wrap {
-    padding: 10px;
-    line-height: 1.5;
-    font-size: 14px;
+    padding: 20px 10px 10px 10px;
+    line-height: 2;
+    font-size: 16px;
     color: #333;
   }
   .form {
