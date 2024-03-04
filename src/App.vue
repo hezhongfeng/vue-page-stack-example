@@ -1,25 +1,35 @@
 <template>
   <router-view v-slot="{ Component }">
-    <vue-page-stack @back="onBack" @forward="onForward">
-      <transition :name="transitionName">
+    <transition :name="transitionName">
+      <keep-alive>
         <component :is="Component" :key="$route.fullPath" class="router-view-c"></component>
-      </transition>
-    </vue-page-stack>
+      </keep-alive>
+    </transition>
   </router-view>
 </template>
+
+<!-- <template>
+  <router-view v-slot="{ Component }">
+    <transition :name="transitionName">
+      <vue-page-stack @back="onBack" @forward="onForward">
+        <component :is="Component" :key="$route.fullPath" class="router-view-c"></component>
+      </vue-page-stack>
+    </transition>
+  </router-view>
+</template> -->
 
 <script setup>
 import { ref } from 'vue';
 
 const transitionName = ref('forward');
 
-const onBack = () => {
-  transitionName.value = 'back';
-};
+// const onBack = () => {
+//   transitionName.value = 'back';
+// };
 
-const onForward = () => {
-  transitionName.value = 'forward';
-};
+// const onForward = () => {
+//   transitionName.value = 'forward';
+// };
 </script>
 
 <style lang="scss">
