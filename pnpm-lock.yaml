@@ -18,8 +18,8 @@ dependencies:
     specifier: ^9.9.1
     version: 9.9.1(vue@3.4.15)
   vue-page-stack:
-    specifier: ^3.1.1
-    version: 3.1.1(vue-router@4.2.5)(vue@3.4.15)
+    specifier: ^3.1.2
+    version: 3.1.2(vue-router@4.2.5)(vue@3.4.15)
   vue-router:
     specifier: ^4.2.5
     version: 4.2.5(vue@3.4.15)
@@ -3650,8 +3650,8 @@ packages:
       '@vue/devtools-api': 6.5.1
       vue: 3.4.15(typescript@5.3.3)
 
-  /vue-page-stack@3.1.1(vue-router@4.2.5)(vue@3.4.15):
-    resolution: {integrity: sha512-dgnInRZsce8hfJTArdUa+94m36FqKswNnL/Bk4HrluJEfRSTHFFwoMrl0b319LH0XV/3iULzu9iCQUjrHqru6g==}
+  /vue-page-stack@3.1.2(vue-router@4.2.5)(vue@3.4.15):
+    resolution: {integrity: sha512-l2mZ8VPxw+YeM6fqZzResOaWGlgPR1GTSevJZtiL8MJQkdjlh5TsDVtSTzvX8VUnGcFaB4HNCo5yzGh5LYdXxg==}
     peerDependencies:
       vue: ^3.3.4
       vue-router: ^4.2.2

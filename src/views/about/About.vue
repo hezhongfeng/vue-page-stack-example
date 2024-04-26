@@ -199,7 +199,7 @@
         </g>
       </svg>
       <div class="package">
-        <div class="version">v3.1.0</div>
+        <div class="version">v3.1.2</div>
         <div class="auther">Author: hezf</div>
       </div>
     </div>
