@@ -18,7 +18,7 @@ const onForward = () => {
 
 <style lang="scss">
 :root {
-  --van-primary-color: #41b883;
+  --van-primary-color: #c028f7;
   --van-font-size-md: 16px;
 }
 #app {
