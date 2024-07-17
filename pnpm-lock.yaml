@@ -21,8 +21,8 @@ importers:
         specifier: ^9.13.1
         version: 9.13.1(vue@3.4.31(typescript@5.3.3))
       vue-page-stack:
-        specifier: ^3.1.4
-        version: 3.1.4(vue-router@4.4.0(vue@3.4.31(typescript@5.3.3)))(vue@3.4.31(typescript@5.3.3))
+        specifier: ^3.1.5
+        version: 3.1.5(vue-router@4.4.0(vue@3.4.31(typescript@5.3.3)))(vue@3.4.31(typescript@5.3.3))
       vue-router:
         specifier: ^4.4.0
         version: 4.4.0(vue@3.4.31(typescript@5.3.3))
@@ -617,9 +617,6 @@ packages:
 
   '@vue/shared@3.4.15':
     resolution: {integrity: sha512-KzfPTxVaWfB+eGcGdbSf4CWdaXcGDqckoeXUh7SB3fZdEtzPCK2Vq9B/lRRL3yutax/LWITz+SwvgyOxz5V75g==}
-
-  '@vue/shared@3.4.21':
-    resolution: {integrity: sha512-PuJe7vDIi6VYSinuEbUIQgMIRZGgM8e4R+G+/dQTk0X1NEdvgvvgv7m+rfmDH1gZzyA1OjjoWskvHlfRNfQf3g==}
 
   '@vue/shared@3.4.31':
     resolution: {integrity: sha512-Yp3wtJk//8cO4NItOPpi3QkLExAr/aLBGZMmTtW9WpdwBCJpRM6zj9WgWktXAl8IDIozwNMByT45JP3tO3ACWA==}
@@ -2178,8 +2175,8 @@ packages:
     peerDependencies:
       vue: ^3.0.0
 
-  vue-page-stack@3.1.4:
-    resolution: {integrity: sha512-gPBpITuUWlzLFb4q5QOUqmA5bQJ1N4aa0Kdblh0mmQhfOc56bePdVDRXr/+dx8/SdH7VcjpD+wT8s/ZMEqnbxg==}
+  vue-page-stack@3.1.5:
+    resolution: {integrity: sha512-67GTfBOgKUS31DfOjZRqWuJ56CRN8o9SGFFOJXbGT37M4gRTdtSXxPO+GpYMx6PUbvhzSqkRMUfiKP8NqLC+hA==}
     peerDependencies:
       vue: ^3.3.4
       vue-router: ^4.2.2
@@ -2822,8 +2819,6 @@ snapshots:
       vue: 3.4.31(typescript@5.3.3)
 
   '@vue/shared@3.4.15': {}
-
-  '@vue/shared@3.4.21': {}
 
   '@vue/shared@3.4.31': {}
 
@@ -4419,9 +4414,9 @@ snapshots:
       '@vue/devtools-api': 6.5.1
       vue: 3.4.31(typescript@5.3.3)
 
-  vue-page-stack@3.1.4(vue-router@4.4.0(vue@3.4.31(typescript@5.3.3)))(vue@3.4.31(typescript@5.3.3)):
+  vue-page-stack@3.1.5(vue-router@4.4.0(vue@3.4.31(typescript@5.3.3)))(vue@3.4.31(typescript@5.3.3)):
     dependencies:
-      '@vue/shared': 3.4.21
+      '@vue/shared': 3.4.31
       detect-browser-navigation-in-vue-router: 1.0.0(vue-router@4.4.0(vue@3.4.31(typescript@5.3.3)))(vue@3.4.31(typescript@5.3.3))
       vue: 3.4.31(typescript@5.3.3)
       vue-router: 4.4.0(vue@3.4.31(typescript@5.3.3))
