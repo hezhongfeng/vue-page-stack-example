@@ -1,0 +1,29 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--app-background-color);
+}
+
+#app {
+  position: relative;
+  background-color: var(--app-background-color);
+}
+
+@keyframes show {
+  0% {
+    transform: translateY(100px);
+  }
+
+  60% {
+    transform: translateY(-80upx);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

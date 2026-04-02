@@ -63,18 +63,18 @@ const onExperience = () => {
   height: 100%;
   .desc {
     position: relative;
-    padding-top: 10vw;
+    padding-top: var(--app-logo-padding-top);
     .logo {
       display: flex;
       justify-content: center;
       img {
-        width: 50vw;
+        width: var(--app-logo-width);
       }
     }
   }
   .content {
     width: 100%;
-    color: #8799a3;
+    color: var(--app-text-muted);
     font-size: 18px;
     .explain {
       width: 100%;

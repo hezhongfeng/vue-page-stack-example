@@ -38,18 +38,18 @@ const onForward = () => {
 
 <style lang="scss">
 .stack-header {
-  height: 45px;
+  height: var(--app-header-height);
   line-height: 44px;
   width: 100%;
   text-align: center;
   background-color: #fff;
-  border-bottom: #e5e5e5 1px solid;
+  border-bottom: var(--app-border-color) 1px solid;
   position: fixed;
   top: 0;
 
   > h1 {
     font-size: 20px;
-    color: #5b5a67;
+    color: var(--app-text-strong);
     margin: 0;
     font-weight: 400;
   }
@@ -61,7 +61,7 @@ const onForward = () => {
     height: 44px;
     font-size: 16px;
     padding-left: 10px;
-    color: #5b5a67;
+    color: var(--app-text-strong);
   }
 
   > .h-right {
@@ -71,7 +71,7 @@ const onForward = () => {
     height: 44px;
     font-size: 16px;
     padding-right: 10px;
-    color: #5b5a67;
+    color: var(--app-text-strong);
   }
 }
 </style>

@@ -1,0 +1,13 @@
+:root {
+  --app-primary-color: #c028f7;
+  --app-background-color: rgb(247, 247, 250);
+  --app-text-muted: #8799a3;
+  --app-text-strong: #5b5a67;
+  --app-border-color: #e5e5e5;
+  --app-header-height: 45px;
+  --app-logo-width: 50vw;
+  --app-logo-padding-top: 10vw;
+
+  --van-primary-color: var(--app-primary-color);
+  --van-font-size-md: 16px;
+}

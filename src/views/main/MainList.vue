@@ -1,6 +1,6 @@
 <template>
   <div class="main-list">
-    <div style="height: 45px"></div>
+    <div class="header-placeholder"></div>
     <div class="scroll" ref="wrapper">
       <div class="scroll-content">
         <main-item
@@ -51,6 +51,11 @@ nextTick(() => {
 .main-list {
   height: 100%;
   position: relative;
+
+  .header-placeholder {
+    height: var(--app-header-height);
+  }
+
   .scroll {
     height: calc(100% - 70px);
   }

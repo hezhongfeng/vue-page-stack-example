@@ -34,19 +34,19 @@ const { t } = useI18n();
       line-height: 1.5;
       top: 55vw;
       font-size: 18px;
-      color: #8799a3;
+      color: var(--app-text-muted);
       padding-top: 3vw;
     }
     img {
-      padding-top: 10vw;
-      width: 50vw;
+      padding-top: var(--app-logo-padding-top);
+      width: var(--app-logo-width);
     }
   }
   .desc {
     margin: 10px 20px 10px 20px;
     line-height: 1.8;
     font-size: 14px;
-    color: #8799a3;
+    color: var(--app-text-muted);
   }
 }
 </style>

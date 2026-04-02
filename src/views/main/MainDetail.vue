@@ -61,7 +61,7 @@ const onPush = () => {
 <style lang="scss">
 .main-detail {
   min-height: 100%;
-  padding-top: 45px;
+  padding-top: var(--app-header-height);
   .p-scroll-wrap {
     height: calc(100% - 90px);
   }
