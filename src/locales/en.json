@@ -40,5 +40,23 @@
     "desc1": "Routing and navigation for your Vue SPA.",
     "desc2": "The idea comes from actual business needs, there is often such a need when developing WeChat and Hybrid App, Finally vue-stack-page was born.",
     "desc3": "Welcome to use, welcome to PR, hope to help you."
+  },
+  "mainList": {
+    "items": {
+      "0": "Extend vue-router without changing the original navigation flow.",
+      "1": "A new rendered page instance is pushed into the stack on push or forward.",
+      "2": "Going back restores the previous page and keeps its existing state.",
+      "3": "Unused pages are removed from the stack after navigating back.",
+      "4": "replace updates the page information stored in the stack.",
+      "5": "Re-activating a cached page will trigger the activated hook.",
+      "6": "Browser back and forward events are supported.",
+      "7": "Route parameter changes can be handled correctly.",
+      "8": "Cached state can still be restored after deeper navigation.",
+      "9": "Form input can stay with the cached page state.",
+      "10": "Page transitions feel closer to native mobile navigation.",
+      "11": "The detail page can keep pushing new detail instances.",
+      "12": "Returning from login still restores the previous page context.",
+      "13": "A compact demo for mobile-oriented navigation caching."
+    }
   }
 }

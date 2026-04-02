@@ -2,65 +2,71 @@ export const MAIN_LIST_ITEMS = [
   {
     id: '0',
     background: '#7effdb',
-    message: '在vue-router上扩展，原有导航逻辑不需改变'
+    messageKey: 'mainList.items.0'
   },
   {
     id: '1',
     background: '#a393eb',
-    message: 'push或者forward的时候重新渲染页面，Stack中会添加新渲染的页面'
+    messageKey: 'mainList.items.1'
   },
   {
     id: '2',
     background: '#fc5c9c',
-    message: 'back或者go(负数)的时候从Stack中获取先前的页面，会保留好先前的内容状态，例如表单内容等'
+    messageKey: 'mainList.items.2'
   },
   {
     id: '3',
     background: '#90f2ff',
-    message: 'back或者go(负数)的时候会把不用的页面从Stack中移除'
+    messageKey: 'mainList.items.3'
   },
   {
     id: '4',
     background: '#a393eb',
-    message: 'replace会更新Stack中页面信息'
+    messageKey: 'mainList.items.4'
   },
   {
     id: '5',
     background: '#fc5c9c',
-    message: '重新渲染的时候有activited钩子函数触发'
+    messageKey: 'mainList.items.5'
   },
   {
     id: '6',
     background: '#3d84a8',
-    message: '支持浏览器的后退，前进事件'
+    messageKey: 'mainList.items.6'
   },
   {
     id: '7',
     background: '#46cdcf',
-    message: '支持响应路由参数的变化'
+    messageKey: 'mainList.items.7'
   },
   {
     id: '8',
-    background: '#00b8a9'
+    background: '#00b8a9',
+    messageKey: 'mainList.items.8'
   },
   {
     id: '9',
-    background: '#8ef6e4'
+    background: '#8ef6e4',
+    messageKey: 'mainList.items.9'
   },
   {
     id: '10',
-    background: '#9896f1'
+    background: '#9896f1',
+    messageKey: 'mainList.items.10'
   },
   {
     id: '11',
-    background: '#fc5c9c'
+    background: '#fc5c9c',
+    messageKey: 'mainList.items.11'
   },
   {
     id: '12',
-    background: '#a393eb'
+    background: '#a393eb',
+    messageKey: 'mainList.items.12'
   },
   {
     id: '13',
-    background: '#90f2ff'
+    background: '#90f2ff',
+    messageKey: 'mainList.items.13'
   }
 ];

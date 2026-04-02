@@ -1,13 +1,6 @@
-<template>
-  <div class="main-item" :style="styleObject" @click="onClick" @animationend="animationend">
-    <div class="content">
-      <div class="message-wrap">{{ index }}</div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { computed, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
 const props = defineProps({
   index: {
@@ -22,8 +15,17 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['click']);
+const { t } = useI18n();
 
 const isAnimationend = ref(false);
+
+const message = computed(() => {
+  if (props.item.messageKey) {
+    return t(props.item.messageKey);
+  }
+
+  return props.item.message || String(props.index);
+});
 
 const styleObject = computed(() => {
   return {
@@ -41,6 +43,14 @@ const animationend = () => {
 };
 </script>
 
+<template>
+  <div class="main-item" :style="styleObject" @click="onClick" @animationend="animationend">
+    <div class="content">
+      <div class="message-wrap">{{ message }}</div>
+    </div>
+  </div>
+</template>
+
 <style lang="scss">
 .main-item {
   height: 40vw;
@@ -56,7 +66,9 @@ const animationend = () => {
 
     .message-wrap {
       line-height: 1.5;
-      font-size: 35px;
+      padding: 0 18px;
+      font-size: 16px;
+      text-align: center;
       color: #333;
     }
   }
