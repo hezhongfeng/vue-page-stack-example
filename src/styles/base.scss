@@ -7,11 +7,16 @@ body,
 body {
   margin: 0;
   background-color: var(--app-background-color);
+  color: var(--app-text-default);
 }
 
 #app {
   position: relative;
   background-color: var(--app-background-color);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @keyframes show {

@@ -4,7 +4,7 @@
       <img src="@/assets/stack.svg" />
       <div class="package">
         <div class="version">v{{ APP_VERSION }}</div>
-        <div class="auther">Author: hezf</div>
+        <div class="auther">Author: {{ ABOUT_AUTHOR }}</div>
       </div>
     </div>
     <div class="desc">{{ t('aboutPage.desc1') }}</div>
@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+import { ABOUT_AUTHOR } from '@/constants/about';
 import { APP_VERSION } from '@/constants/app';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();

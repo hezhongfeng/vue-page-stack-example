@@ -1,0 +1,10 @@
+.page-padding {
+  padding-left: var(--app-page-padding);
+  padding-right: var(--app-page-padding);
+}
+
+.app-card {
+  border-radius: var(--app-card-radius);
+  background: var(--app-surface-color);
+  box-shadow: var(--app-card-shadow);
+}

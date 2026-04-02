@@ -2,8 +2,9 @@ import { createApp } from 'vue';
 import router from './router';
 import { i18n } from './i18n';
 import App from './App.vue';
-import './styles/theme.scss';
-import './styles/global.scss';
+import './styles/tokens.scss';
+import './styles/base.scss';
+import './styles/utilities.scss';
 import { APP_NAME } from './constants/app';
 
 import { VuePageStackPlugin } from 'vue-page-stack';
