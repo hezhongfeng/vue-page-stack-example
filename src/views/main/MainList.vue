@@ -12,13 +12,14 @@
         ></main-item>
       </div>
     </div>
-    <stack-header title="home"></stack-header>
+    <stack-header :title="t('home')"></stack-header>
   </div>
 </template>
 
 <script setup>
 import { nextTick, ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import { useBetterScroll } from '@/composables/useBetterScroll';
 import { MAIN_LIST_ITEMS } from '@/constants/mainList';
 import { getMainDetailPath } from '@/constants/routes';
@@ -26,6 +27,7 @@ import MainItem from './components/MainItem.vue';
 import StackHeader from './components/StackHeader.vue';
 
 const router = useRouter();
+const { t } = useI18n();
 
 const list = ref(MAIN_LIST_ITEMS);
 

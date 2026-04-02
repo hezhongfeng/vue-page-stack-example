@@ -2,13 +2,34 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import { ROUTE_PATHS } from '@/constants/routes';
 
 const routes = [
-  { path: ROUTE_PATHS.index, component: () => import('../views/index/Index.vue') },
-  { path: ROUTE_PATHS.home, component: () => import('../views/home/Home.vue') },
+  {
+    path: ROUTE_PATHS.index,
+    component: () => import('../views/index/Index.vue'),
+    meta: {
+      titleKey: 'route.index'
+    }
+  },
+  {
+    path: ROUTE_PATHS.home,
+    component: () => import('../views/home/Home.vue'),
+    meta: {
+      titleKey: 'route.home'
+    }
+  },
   {
     path: ROUTE_PATHS.mainDetail,
-    component: () => import('../views/main/MainDetail.vue')
+    component: () => import('../views/main/MainDetail.vue'),
+    meta: {
+      titleKey: 'route.mainDetail'
+    }
   },
-  { path: ROUTE_PATHS.login, component: () => import('../views/login/Login.vue') }
+  {
+    path: ROUTE_PATHS.login,
+    component: () => import('../views/login/Login.vue'),
+    meta: {
+      titleKey: 'route.login'
+    }
+  }
 ];
 
 const router = createRouter({

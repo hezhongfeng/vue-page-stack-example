@@ -3,7 +3,7 @@
     <div class="logo">
       <img src="@/assets/stack.svg" />
       <div class="package">
-        <div class="version">v3.2.0</div>
+        <div class="version">v{{ APP_VERSION }}</div>
         <div class="auther">Author: hezf</div>
       </div>
     </div>
@@ -14,6 +14,7 @@
 </template>
 
 <script setup>
+import { APP_VERSION } from '@/constants/app';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 </script>

@@ -1,5 +1,8 @@
 module.exports = {
   root: true,
+  globals: {
+    __APP_VERSION__: 'readonly'
+  },
   extends: ['plugin:vue/vue3-essential', 'eslint:recommended'],
   parserOptions: {
     ecmaVersion: 'latest'

@@ -8,6 +8,12 @@
   "about": "About",
   "login": "Login",
   "signup": "Signup",
+  "route": {
+    "index": "Home",
+    "home": "Main",
+    "login": "Login",
+    "mainDetail": "Detail"
+  },
   "placeholder": {
     "username": "please enter user name",
     "password": "please enter password"

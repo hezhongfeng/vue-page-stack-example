@@ -11,12 +11,11 @@
 </template>
 
 <script setup>
-import { watch } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     default: '',
@@ -25,14 +24,6 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['back', 'forward']);
-
-watch(
-  () => props.title,
-  title => {
-    window.document.title = title;
-  },
-  { immediate: true }
-);
 
 const onBack = () => {
   router.back();

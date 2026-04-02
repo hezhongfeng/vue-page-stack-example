@@ -8,6 +8,12 @@
   "about": "关于",
   "login": "登录",
   "signup": "注册",
+  "route": {
+    "index": "首页",
+    "home": "主页",
+    "login": "登录",
+    "mainDetail": "详情"
+  },
   "placeholder": {
     "username": "请输入用户名",
     "password": "请输入密码"

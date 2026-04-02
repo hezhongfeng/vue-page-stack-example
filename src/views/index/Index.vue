@@ -7,7 +7,7 @@
     </div>
     <div class="content">
       <p class="explain">{{ t('explain') }}</p>
-      <p class="version">v3.2.0</p>
+      <p class="version">v{{ APP_VERSION }}</p>
     </div>
     <div class="form">
       <van-button type="primary" @click="onExperience" block>{{ t('quickStart') }}</van-button>
@@ -31,6 +31,7 @@
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { i18n, getLocale, setI18nLanguage } from '../../i18n';
+import { APP_VERSION } from '@/constants/app';
 import { LANGUAGE_OPTIONS, getLanguageLabel } from '@/constants/languages';
 import { ROUTE_PATHS } from '@/constants/routes';
 import { useRouter } from 'vue-router';
@@ -49,6 +50,7 @@ const onConfirm = ({ selectedOptions }) => {
   language.value = selectedOptions[0]?.text;
   showPicker.value = false;
   setI18nLanguage(i18n, selectedOptions[0]?.value);
+  document.title = t('route.index');
 };
 
 const onExperience = () => {
