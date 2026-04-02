@@ -7,13 +7,13 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore",
-    "lint-fix": "eslint . --ext .vue,.js,.jsx,.mjs --fix --ignore-path .gitignore",
+    "lint": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\"",
+    "lint-fix": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --fix --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\"",
     "prepare": "husky install",
     "format": "prettier --write src/"
   },
   "lint-staged": {
-    "*.{vue,js,jsx,tsx}": "eslint . --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore"
+    "*.{vue,js,jsx,tsx}": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\""
   },
   "config": {
     "commitizen": {
