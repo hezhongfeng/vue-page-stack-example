@@ -20,7 +20,9 @@
   },
   "detail": {
     "desc": "enter some text in the input，then push to next page",
+    "tip": "The text you enter here should stay on the cached page, so you can see it again when you come back.",
     "placeholder": "enter some text",
+    "actionsTitle": "Navigation actions",
     "push": {
       "same": "Push to next page",
       "login": "Push to Login page",
@@ -28,7 +30,11 @@
     },
     "replace": "Replace current page",
     "currentPageNumber": "current page number",
-    "currentUserName": "current user name"
+    "currentUserName": "current user name",
+    "activationCount": "activation count",
+    "cachedInput": "cached input",
+    "emptyInput": "no input yet",
+    "noUser": "guest"
   },
   "aboutPage": {
     "desc1": "Routing and navigation for your Vue SPA.",

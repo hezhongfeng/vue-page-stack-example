@@ -20,7 +20,9 @@
   },
   "detail": {
     "desc": "在下面的input中输入内容，然后push到下一页面",
+    "tip": "你在这里输入的内容会保留在缓存页面里，返回时可以直接看到之前的状态。",
     "placeholder": "输入一些信息",
+    "actionsTitle": "导航操作",
     "push": {
       "same": "Push到下一页",
       "login": "Push到登录",
@@ -28,7 +30,11 @@
     },
     "replace": "Replace当前页",
     "currentPageNumber": "当前页码",
-    "currentUserName": "当前用户"
+    "currentUserName": "当前用户",
+    "activationCount": "激活次数",
+    "cachedInput": "缓存输入",
+    "emptyInput": "暂未输入内容",
+    "noUser": "未登录"
   },
   "aboutPage": {
     "desc1": "Vue 单页应用导航管理器",
