@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="form">
-        <van-button type="primary" @click="onExperience" block>{{ t('quickStart') }}</van-button>
+        <van-button class="hero-button" type="primary" @click="onExperience" block>{{ t('quickStart') }}</van-button>
       </div>
     </section>
     <section class="change-language app-card">
@@ -86,8 +86,8 @@ const onExperience = () => {
   min-height: 100%;
   padding: 20px var(--app-page-padding) 24px;
   background:
-    radial-gradient(circle at top left, rgba(243, 181, 98, 0.22), transparent 34%),
-    radial-gradient(circle at top right, rgba(23, 107, 87, 0.15), transparent 28%),
+    radial-gradient(circle at top left, rgba(127, 166, 175, 0.22), transparent 34%),
+    radial-gradient(circle at top right, rgba(47, 95, 103, 0.12), transparent 28%),
     var(--app-gradient-hero);
 
   .hero {
@@ -123,7 +123,7 @@ const onExperience = () => {
   .meta-item {
     padding: 14px 12px;
     border-radius: 14px;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.72);
   }
 
   .meta-label {
@@ -144,6 +144,12 @@ const onExperience = () => {
 
   .form {
     margin-top: 18px;
+  }
+
+  .hero-button {
+    background: linear-gradient(135deg, #5e8690, #426a73) !important;
+    border-color: #426a73 !important;
+    box-shadow: 0 12px 20px rgba(66, 106, 115, 0.18) !important;
   }
 
   .change-language {

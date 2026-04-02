@@ -63,8 +63,8 @@ nextTick(() => {
   }
 
   .intro {
-    margin: 8px var(--app-page-padding) 14px;
-    padding: 18px 16px;
+    margin: 6px var(--app-page-padding) 12px;
+    padding: 14px 14px 15px;
   }
 
   .intro-kicker {
@@ -76,21 +76,21 @@ nextTick(() => {
   }
 
   .intro-title {
-    margin-top: 8px;
+    margin-top: 6px;
     color: var(--app-text-strong);
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
   }
 
   .intro-copy {
-    margin-top: 8px;
+    margin-top: 6px;
     color: var(--app-text-muted);
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.55;
   }
 
   .scroll {
-    height: calc(100% - 170px);
+    height: calc(100% - 150px);
   }
 }
 </style>

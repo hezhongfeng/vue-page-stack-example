@@ -57,6 +57,14 @@ const tabs = computed(() => {
     :deep(.van-tabbar-item__icon) {
       margin-bottom: 4px;
     }
+
+    :deep(.van-tabbar-item--active) {
+      color: var(--app-primary-strong);
+    }
+
+    :deep(.van-tabbar-item--active .van-tabbar-item__text) {
+      color: var(--app-primary-strong);
+    }
   }
 }
 </style>

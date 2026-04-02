@@ -121,7 +121,7 @@ const actionButtons = computed(() =>
   min-height: 100%;
   padding-top: var(--app-header-height);
   background:
-    radial-gradient(circle at top right, rgba(243, 181, 98, 0.14), transparent 24%),
+    radial-gradient(circle at top right, rgba(127, 166, 175, 0.14), transparent 24%),
     transparent;
 
   .p-scroll-wrap {

@@ -54,12 +54,13 @@ const animationend = () => {
 
 <style lang="scss">
 .main-item {
-  height: 38vw;
-  min-height: 152px;
-  margin: 0 var(--app-page-padding) 12px;
+  height: 34vw;
+  min-height: 136px;
+  margin: 0 var(--app-page-padding) 10px;
   border-radius: 22px;
-  box-shadow: var(--app-card-shadow-strong);
+  box-shadow: var(--app-card-shadow);
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.32);
 
   .content {
     height: 100%;
@@ -67,17 +68,20 @@ const animationend = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 12px;
+    padding: 12px 12px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.04)),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 28%);
 
     .badge {
       position: absolute;
-      top: 14px;
-      left: 14px;
+      top: 12px;
+      left: 12px;
       min-width: 30px;
       height: 30px;
       padding: 0 10px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.4);
       color: rgba(22, 50, 43, 0.88);
       font-size: 12px;
       font-weight: 800;
@@ -89,9 +93,9 @@ const animationend = () => {
     .message-wrap {
       max-width: 100%;
       line-height: 1.5;
-      padding: 20px 22px 0;
-      font-size: 18px;
-      font-weight: 700;
+      padding: 18px 20px 0;
+      font-size: 17px;
+      font-weight: 650;
       text-align: center;
       color: rgba(22, 50, 43, 0.92);
       text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);

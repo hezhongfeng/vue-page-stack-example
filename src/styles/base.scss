@@ -53,7 +53,14 @@ a,
 }
 
 .van-button--primary {
-  box-shadow: 0 14px 24px rgba(23, 107, 87, 0.24);
+  color: #f7f6f1;
+  background: linear-gradient(135deg, #5e8690, #426a73) !important;
+  border-color: #426a73 !important;
+  box-shadow: 0 10px 18px rgba(66, 106, 115, 0.16);
+}
+
+.van-button--primary::before {
+  display: none;
 }
 
 .van-button--default {
@@ -77,7 +84,13 @@ a,
 }
 
 .van-tabbar-item--active {
+  color: var(--app-primary-strong) !important;
   font-weight: 700;
+}
+
+.van-tabbar-item--active .van-tabbar-item__icon,
+.van-tabbar-item--active .van-tabbar-item__text {
+  color: var(--app-primary-strong) !important;
 }
 
 @keyframes show {
