@@ -15,6 +15,7 @@ import { watch } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+
 const props = defineProps({
   title: {
     type: String,
@@ -26,9 +27,7 @@ const props = defineProps({
 const emit = defineEmits(['back', 'forward']);
 
 watch(
-  () => {
-    return props.title;
-  },
+  () => props.title,
   title => {
     window.document.title = title;
   },
@@ -39,6 +38,7 @@ const onBack = () => {
   router.back();
   emit('back');
 };
+
 const onForward = () => {
   router.forward();
   emit('forward');
@@ -55,6 +55,7 @@ const onForward = () => {
   border-bottom: #e5e5e5 1px solid;
   position: fixed;
   top: 0;
+
   > h1 {
     font-size: 20px;
     color: #5b5a67;

@@ -15,26 +15,14 @@
 </template>
 
 <script setup>
-import { ref, onActivated, computed } from 'vue';
-import { useRoute, onBeforeRouteUpdate } from 'vue-router';
+import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import MainList from '../main/MainList.vue';
 import About from '../about/About.vue';
 
-const route = useRoute();
-
 const selectedIndex = ref('0');
 
 const { t } = useI18n();
-
-onActivated(() => {
-  console.log('Home activated');
-});
-
-onBeforeRouteUpdate(to => {
-  console.log('beforeRouteUpdate');
-  selectedIndex.value = to.params.tab;
-});
 
 const tabs = computed(() => {
   return [
@@ -50,9 +38,6 @@ const tabs = computed(() => {
     }
   ];
 });
-
-console.log('Home created');
-selectedIndex.value = route.params.tab || '0';
 </script>
 
 <style lang="scss">

@@ -35,6 +35,7 @@ const styleObject = computed(() => {
 const onClick = () => {
   emit('click');
 };
+
 const animationend = () => {
   isAnimationend.value = true;
 };
@@ -46,11 +47,13 @@ const animationend = () => {
   margin: 10px;
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+
   .content {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
     .message-wrap {
       line-height: 1.5;
       font-size: 35px;

@@ -30,21 +30,20 @@
 <script setup>
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { i18n, setI18nLanguage } from '../../i18n';
+import { i18n, getLocale, setI18nLanguage } from '../../i18n';
+import { LANGUAGE_OPTIONS, getLanguageLabel } from '@/constants/languages';
+import { ROUTE_PATHS } from '@/constants/routes';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
 const { t } = useI18n();
 
-const language = ref('简体中文');
+const language = ref(getLanguageLabel(getLocale(i18n)));
 
 const showPicker = ref(false);
 
-const columns = [
-  { text: '简体中文', value: 'zh' },
-  { text: 'English', value: 'en' }
-];
+const columns = LANGUAGE_OPTIONS;
 
 const onConfirm = ({ selectedOptions }) => {
   language.value = selectedOptions[0]?.text;
@@ -53,8 +52,7 @@ const onConfirm = ({ selectedOptions }) => {
 };
 
 const onExperience = () => {
-  console.log('开始体验 onExperience');
-  router.push('/home');
+  router.push(ROUTE_PATHS.home);
 };
 </script>
 

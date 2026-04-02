@@ -109,3 +109,5 @@ src/
 如果你的目标是验证 `vue-page-stack` 在移动端导航中的表现，这个项目适合作为起点。
 
 如果你的目标是搭建一个同时覆盖移动端和桌面端的通用模板，请不要直接基于这个示例继续扩展。
+
+历史上使用过的 `render function` 应用壳层方案已经转存到 [`docs/AppWithRenderFunction.md`](/Users/hezf/github/vue-page-stack-example/docs/AppWithRenderFunction.md)。

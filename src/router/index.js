@@ -1,18 +1,14 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-
-import Index from '../views/index/Index.vue';
-import Home from '../views/home/Home.vue';
-import MainDetail from '../views/main/MainDetail.vue';
-import Login from '../views/login/Login.vue';
+import { ROUTE_PATHS } from '@/constants/routes';
 
 const routes = [
-  { path: '/', component: Index },
-  { path: '/home', component: Home },
+  { path: ROUTE_PATHS.index, component: () => import('../views/index/Index.vue') },
+  { path: ROUTE_PATHS.home, component: () => import('../views/home/Home.vue') },
   {
-    path: '/main-detail/:id',
-    component: MainDetail
+    path: ROUTE_PATHS.mainDetail,
+    component: () => import('../views/main/MainDetail.vue')
   },
-  { path: '/login', component: Login }
+  { path: ROUTE_PATHS.login, component: () => import('../views/login/Login.vue') }
 ];
 
 const router = createRouter({

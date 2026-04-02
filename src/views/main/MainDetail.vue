@@ -18,10 +18,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onActivated, onBeforeUnmount, onUnmounted, onDeactivated } from 'vue';
-import { useRoute, useRouter, onBeforeRouteUpdate } from 'vue-router';
+import { ref, onActivated } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import StackHeader from './StackHeader.vue';
+import { ROUTE_PATHS, getMainDetailPath } from '@/constants/routes';
+import StackHeader from './components/StackHeader.vue';
 
 const { t } = useI18n();
 
@@ -31,24 +32,7 @@ const route = useRoute();
 const userName = ref('');
 const textValue = ref('');
 
-onBeforeUnmount(() => {
-  console.log('detail onBeforeUnmount ' + textValue.value);
-});
-
-onUnmounted(() => {
-  console.log('detail onUnmounted ' + textValue.value);
-});
-
-onDeactivated(() => {
-  console.log('detail onDeactivated ' + textValue.value);
-});
-
-onMounted(() => {
-  console.log('detail mounted ' + textValue.value);
-});
-
 onActivated(() => {
-  console.log('detail activated');
   if (window.sessionStorage.username) {
     userName.value = window.sessionStorage.username;
   }
@@ -57,19 +41,20 @@ onActivated(() => {
   }
 });
 
-onBeforeRouteUpdate(() => {});
-
 const onLogin = () => {
-  router.push('/login');
+  router.push(ROUTE_PATHS.login);
 };
+
 const onReplace = () => {
-  router.replace('/main-detail/' + (Number(route.params.id) + 1));
+  router.replace(getMainDetailPath(Number(route.params.id) + 1));
 };
+
 const onPushSame = () => {
-  router.push('/main-detail/' + (Number(route.params.id) + 1));
+  router.push(getMainDetailPath(Number(route.params.id) + 1));
 };
+
 const onPush = () => {
-  router.push('/home');
+  router.push(ROUTE_PATHS.home);
 };
 </script>
 

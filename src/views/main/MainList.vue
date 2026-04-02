@@ -17,11 +17,12 @@
 </template>
 
 <script setup>
-import BScroll from '@better-scroll/core';
-import { ref, onMounted, onActivated } from 'vue';
+import { nextTick, ref } from 'vue';
 import { useRouter } from 'vue-router';
-import MainItem from './MainItem.vue';
-import StackHeader from './StackHeader.vue';
+import { useBetterScroll } from '@/composables/useBetterScroll';
+import { getMainDetailPath } from '@/constants/routes';
+import MainItem from './components/MainItem.vue';
+import StackHeader from './components/StackHeader.vue';
 
 const router = useRouter();
 
@@ -94,27 +95,18 @@ const list = ref([
 
 const wrapper = ref(null);
 
-const bs = ref(null);
+const { refresh } = useBetterScroll(wrapper, {
+  click: true,
+  wheel: true
+});
 
 const onClick = item => {
-  router.push('/main-detail/' + item.id);
+  router.push(getMainDetailPath(item.id));
 };
 
-onMounted(() => {
-  bs.value = new BScroll(wrapper.value, {
-    click: true,
-    wheel: true
-  });
+nextTick(() => {
+  refresh();
 });
-
-onActivated(() => {
-  console.log('activated');
-});
-
-// 滚动区域动态填满后，需要刷新bs的滚动区域
-setTimeout(() => {
-  bs.value.refresh();
-}, 100);
 </script>
 
 <style lang="scss">
