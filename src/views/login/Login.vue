@@ -226,7 +226,7 @@ const password = ref('');
 const router = useRouter();
 
 const onLogin = () => {
-  // login success
+  window.sessionStorage.setItem('username', userName.value);
   router.back();
 };
 </script>
