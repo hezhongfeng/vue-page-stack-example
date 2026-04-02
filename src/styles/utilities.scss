@@ -5,6 +5,36 @@
 
 .app-card {
   border-radius: var(--app-card-radius);
-  background: var(--app-surface-color);
+  background: var(--app-gradient-card);
   box-shadow: var(--app-card-shadow);
+}
+
+.app-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(243, 181, 98, 0.16);
+  color: var(--app-primary-strong);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.app-section-title {
+  margin: 0;
+  color: var(--app-text-strong);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.app-section-copy {
+  margin: 0;
+  color: var(--app-text-muted);
+  font-size: 15px;
+  line-height: 1.75;
 }

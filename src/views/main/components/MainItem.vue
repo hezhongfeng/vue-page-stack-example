@@ -46,6 +46,7 @@ const animationend = () => {
 <template>
   <div class="main-item" :style="styleObject" @click="onClick" @animationend="animationend">
     <div class="content">
+      <div class="badge">{{ props.index + 1 }}</div>
       <div class="message-wrap">{{ message }}</div>
     </div>
   </div>
@@ -53,23 +54,47 @@ const animationend = () => {
 
 <style lang="scss">
 .main-item {
-  height: 40vw;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  height: 38vw;
+  min-height: 152px;
+  margin: 0 var(--app-page-padding) 12px;
+  border-radius: 22px;
+  box-shadow: var(--app-card-shadow-strong);
+  overflow: hidden;
 
   .content {
     height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 14px 12px;
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      min-width: 30px;
+      height: 30px;
+      padding: 0 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.7);
+      color: rgba(22, 50, 43, 0.88);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 30px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
 
     .message-wrap {
+      max-width: 100%;
       line-height: 1.5;
-      padding: 0 18px;
-      font-size: 16px;
+      padding: 20px 22px 0;
+      font-size: 18px;
+      font-weight: 700;
       text-align: center;
-      color: #333;
+      color: rgba(22, 50, 43, 0.92);
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
     }
   }
 }

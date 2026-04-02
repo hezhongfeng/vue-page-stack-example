@@ -14,6 +14,14 @@
     "login": "登录",
     "mainDetail": "详情"
   },
+  "ui": {
+    "mobileOnly": "仅限移动端",
+    "version": "版本",
+    "languageHint": "在进入演示流程之前，先切换界面语言并观察标题与文案的变化。",
+    "stackDemo": "缓存演示",
+    "mainListHint": "点击任意卡片进入详情页，观察页面在前进和返回时如何保留状态。",
+    "stateCache": "状态缓存"
+  },
   "placeholder": {
     "username": "请输入用户名",
     "password": "请输入密码"

@@ -43,8 +43,20 @@ const tabs = computed(() => {
 <style lang="scss">
 .c-home {
   height: 100%;
+
   .h-body {
-    height: calc(100% - 50px);
+    height: calc(100% - var(--app-tabbar-height));
+  }
+
+  .h-tabbars {
+    :deep(.van-tabbar) {
+      height: var(--app-tabbar-height);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    :deep(.van-tabbar-item__icon) {
+      margin-bottom: 4px;
+    }
   }
 }
 </style>

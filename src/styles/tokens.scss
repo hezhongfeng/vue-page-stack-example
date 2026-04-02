@@ -1,18 +1,35 @@
 :root {
-  --app-primary-color: #c028f7;
-  --app-background-color: rgb(247, 247, 250);
-  --app-surface-color: #fff;
-  --app-text-default: #333;
-  --app-text-muted: #8799a3;
-  --app-text-strong: #5b5a67;
-  --app-border-color: #e5e5e5;
-  --app-header-height: 45px;
+  --app-primary-color: #176b57;
+  --app-primary-strong: #0f4f41;
+  --app-accent-color: #f3b562;
+  --app-background-color: #f4efe6;
+  --app-surface-color: rgba(255, 255, 255, 0.92);
+  --app-surface-strong: #fffdf8;
+  --app-text-default: #24352f;
+  --app-text-muted: #6f7f79;
+  --app-text-strong: #16322b;
+  --app-border-color: rgba(36, 53, 47, 0.08);
+  --app-header-height: 52px;
   --app-logo-width: 50vw;
   --app-logo-padding-top: 10vw;
-  --app-page-padding: 10px;
-  --app-card-radius: 12px;
-  --app-card-shadow: 0 8px 18px rgba(24, 39, 75, 0.06);
+  --app-page-padding: 14px;
+  --app-card-radius: 18px;
+  --app-card-shadow: 0 18px 40px rgba(25, 46, 39, 0.08);
+  --app-card-shadow-strong: 0 24px 56px rgba(18, 45, 37, 0.16);
+  --app-gradient-hero: linear-gradient(180deg, #f9f6ee 0%, #efe6d7 100%);
+  --app-gradient-card: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(246, 240, 230, 0.92) 100%);
+  --app-tabbar-height: 62px;
+  --app-font-family: "Avenir Next", "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 
   --van-primary-color: var(--app-primary-color);
+  --van-success-color: var(--app-primary-color);
+  --van-button-primary-background: linear-gradient(135deg, var(--app-primary-color), var(--app-primary-strong));
+  --van-button-primary-border-color: transparent;
+  --van-button-border-radius: 16px;
   --van-font-size-md: 16px;
+  --van-cell-background: rgba(255, 255, 255, 0.82);
+  --van-field-input-text-color: var(--app-text-strong);
+  --van-tabbar-background: rgba(255, 253, 248, 0.9);
+  --van-tabbar-item-text-color: var(--app-text-muted);
+  --van-tabbar-item-active-color: var(--app-primary-color);
 }

@@ -14,6 +14,14 @@
     "login": "Login",
     "mainDetail": "Detail"
   },
+  "ui": {
+    "mobileOnly": "Mobile Only",
+    "version": "Version",
+    "languageHint": "Switch the UI language before testing the navigation flow and page titles.",
+    "stackDemo": "Stack Demo",
+    "mainListHint": "Open any card to watch cached pages keep their state while moving forward and back.",
+    "stateCache": "State Cache"
+  },
   "placeholder": {
     "username": "please enter user name",
     "password": "please enter password"

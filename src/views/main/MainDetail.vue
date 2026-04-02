@@ -3,6 +3,7 @@
     <stack-header></stack-header>
     <div class="p-scroll-wrap">
       <div class="desc-wrap">
+        <div class="app-chip">{{ t('ui.stateCache') }}</div>
         <div class="desc">{{ t('detail.desc') }}</div>
         <div class="tip">{{ t('detail.tip') }}</div>
       </div>
@@ -119,6 +120,9 @@ const actionButtons = computed(() =>
 .main-detail {
   min-height: 100%;
   padding-top: var(--app-header-height);
+  background:
+    radial-gradient(circle at top right, rgba(243, 181, 98, 0.14), transparent 24%),
+    transparent;
 
   .p-scroll-wrap {
     height: calc(100% - 90px);
@@ -127,11 +131,19 @@ const actionButtons = computed(() =>
 
   .desc-wrap {
     padding: 20px var(--app-page-padding) 10px;
-    line-height: 2;
-    font-size: 16px;
+    line-height: 1.8;
     color: var(--app-text-default);
 
+    .desc {
+      margin-top: 12px;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--app-text-strong);
+      text-wrap: balance;
+    }
+
     .tip {
+      margin-top: 10px;
       font-size: 13px;
       line-height: 1.7;
       color: var(--app-text-muted);
@@ -147,10 +159,12 @@ const actionButtons = computed(() =>
 
   .status-card {
     min-height: 88px;
-    padding: 12px;
+    padding: 14px;
     .label {
       font-size: 12px;
       color: var(--app-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .value {
@@ -170,6 +184,7 @@ const actionButtons = computed(() =>
 
   .form {
     padding: 0 var(--app-page-padding) 10px;
+    margin-top: 6px;
 
     .actions-title {
       margin-top: 16px;
@@ -180,6 +195,11 @@ const actionButtons = computed(() =>
 
     > * {
       margin-top: 10px;
+    }
+
+    :deep(.van-field) {
+      border-radius: 16px;
+      overflow: hidden;
     }
   }
 }

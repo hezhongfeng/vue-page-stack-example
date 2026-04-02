@@ -8,15 +8,76 @@ body {
   margin: 0;
   background-color: var(--app-background-color);
   color: var(--app-text-default);
+  font-family: var(--app-font-family);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 #app {
   position: relative;
   background-color: var(--app-background-color);
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a,
+.van-button,
+.van-tabbar-item,
+.van-icon {
+  touch-action: manipulation;
+}
+
+.van-button {
+  min-height: 48px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.van-button:active {
+  transform: scale(0.985);
+}
+
+.van-button--primary {
+  box-shadow: 0 14px 24px rgba(23, 107, 87, 0.24);
+}
+
+.van-button--default {
+  border-color: rgba(22, 50, 43, 0.1);
+  color: var(--app-text-strong);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.van-field,
+.van-cell-group--inset {
+  backdrop-filter: blur(14px);
+}
+
+.van-field__control::placeholder {
+  color: var(--app-text-muted);
+}
+
+.van-tabbar {
+  backdrop-filter: blur(18px);
+  border-top: 1px solid rgba(22, 50, 43, 0.08);
+}
+
+.van-tabbar-item--active {
+  font-weight: 700;
 }
 
 @keyframes show {

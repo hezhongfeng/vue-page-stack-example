@@ -1,6 +1,11 @@
 <template>
   <div class="main-list">
     <div class="header-placeholder"></div>
+    <div class="intro app-card">
+      <div class="intro-kicker">{{ t('ui.stackDemo') }}</div>
+      <div class="intro-title">{{ t('home') }}</div>
+      <div class="intro-copy">{{ t('ui.mainListHint') }}</div>
+    </div>
     <div class="scroll" ref="wrapper">
       <div class="scroll-content">
         <main-item
@@ -51,13 +56,41 @@ nextTick(() => {
 .main-list {
   height: 100%;
   position: relative;
+  padding-bottom: calc(var(--app-tabbar-height) + 10px);
 
   .header-placeholder {
     height: var(--app-header-height);
   }
 
+  .intro {
+    margin: 8px var(--app-page-padding) 14px;
+    padding: 18px 16px;
+  }
+
+  .intro-kicker {
+    font-size: 11px;
+    color: var(--app-primary-strong);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .intro-title {
+    margin-top: 8px;
+    color: var(--app-text-strong);
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .intro-copy {
+    margin-top: 8px;
+    color: var(--app-text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
   .scroll {
-    height: calc(100% - 70px);
+    height: calc(100% - 170px);
   }
 }
 </style>

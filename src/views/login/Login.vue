@@ -202,10 +202,22 @@
       </div>
       <van-form>
         <van-cell-group inset>
-          <van-field v-model="userName" :placeholder="t('placeholder.username')"></van-field>
-          <van-field v-model="password" type="password" :placeholder="t('placeholder.password')"></van-field>
+          <van-field
+            v-model="userName"
+            name="username"
+            autocomplete="username"
+            spellcheck="false"
+            :placeholder="t('placeholder.username') + '…'"
+          ></van-field>
+          <van-field
+            v-model="password"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            :placeholder="t('placeholder.password') + '…'"
+          ></van-field>
         </van-cell-group>
-        <div style="margin: 16px">
+        <div class="action-wrap">
           <van-button @click="onLogin" type="primary" block>{{ t('login') }}</van-button>
         </div>
       </van-form>
@@ -233,21 +245,36 @@ const onLogin = () => {
 
 <style lang="scss">
 .login {
-  height: 100%;
+  min-height: 100%;
+  padding: 24px var(--app-page-padding);
+  background:
+    radial-gradient(circle at top left, rgba(23, 107, 87, 0.16), transparent 30%),
+    radial-gradient(circle at top right, rgba(243, 181, 98, 0.18), transparent 30%),
+    var(--app-gradient-hero);
+
   .form {
-    padding: 60vw 10px 10px 10px;
+    position: relative;
+    overflow: hidden;
+    padding: min(58vw, 360px) 16px 18px;
+    border-radius: 28px;
+    background: rgba(255, 253, 248, 0.84);
+    box-shadow: var(--app-card-shadow-strong);
+    backdrop-filter: blur(20px);
+
     .logo {
       position: absolute;
-      top: -20px;
+      top: -4px;
       left: 0;
       width: 100%;
+
       svg {
-        height: 75vw;
+        height: min(72vw, 340px);
         width: 100%;
       }
     }
-    .name {
-      font-size: 16px;
+
+    .action-wrap {
+      margin: 18px 0 0;
     }
   }
 }

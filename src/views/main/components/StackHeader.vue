@@ -1,12 +1,12 @@
 <template>
   <header class="stack-header">
-    <div class="h-left">
-      <van-icon @click="onBack" size="20" name="arrow-left" />
-    </div>
+    <button class="h-left" type="button" aria-label="Go back" @click="onBack">
+      <van-icon aria-hidden="true" size="20" name="arrow-left" />
+    </button>
     <h1>{{ title }}</h1>
-    <div class="h-right">
-      <van-icon @click="onForward" size="20" name="arrow" />
-    </div>
+    <button class="h-right" type="button" aria-label="Go forward" @click="onForward">
+      <van-icon aria-hidden="true" size="20" name="arrow" />
+    </button>
   </header>
 </template>
 
@@ -39,39 +39,48 @@ const onForward = () => {
 <style lang="scss">
 .stack-header {
   height: var(--app-header-height);
-  line-height: 44px;
+  line-height: var(--app-header-height);
   width: 100%;
   text-align: center;
-  background-color: #fff;
+  background: rgba(255, 253, 248, 0.84);
   border-bottom: var(--app-border-color) 1px solid;
   position: fixed;
   top: 0;
+  backdrop-filter: blur(20px);
+  z-index: 10;
 
   > h1 {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--app-text-strong);
     margin: 0;
-    font-weight: 400;
+    font-weight: 800;
+    letter-spacing: 0.01em;
   }
 
   > .h-left {
     position: absolute;
     top: 0;
     left: 0;
-    height: 44px;
+    height: var(--app-header-height);
+    min-width: 52px;
     font-size: 16px;
-    padding-left: 10px;
+    padding: 0 12px;
     color: var(--app-text-strong);
+    border: 0;
+    background: transparent;
   }
 
   > .h-right {
     position: absolute;
     top: 0;
     right: 0;
-    height: 44px;
+    height: var(--app-header-height);
+    min-width: 52px;
     font-size: 16px;
-    padding-right: 10px;
+    padding: 0 12px;
     color: var(--app-text-strong);
+    border: 0;
+    background: transparent;
   }
 }
 </style>
