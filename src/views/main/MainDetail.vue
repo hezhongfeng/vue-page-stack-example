@@ -14,12 +14,20 @@
         </div>
       </div>
       <div class="form">
-        <van-field v-model="textValue" :placeholder="t('detail.placeholder')" />
+        <van-field v-model="textValue" clearable :placeholder="t('detail.placeholder')" />
+        <div class="input-feedback app-card">
+          <div class="feedback-label">{{ t('detail.inputStatusLabel') }}</div>
+          <div class="feedback-value">
+            {{ textValue ? t('detail.inputStatusReady') : t('detail.inputStatusEmpty') }}
+          </div>
+        </div>
         <div class="actions-title">{{ t('detail.actionsTitle') }}</div>
         <van-button
           v-for="action in actionButtons"
           :key="action.key"
           @click="action.handler"
+          :loading="action.loading"
+          :disabled="action.disabled"
           :type="action.primary ? 'primary' : 'default'"
           block
         >
@@ -31,7 +39,7 @@
 </template>
 
 <script setup>
-import { computed, onActivated } from 'vue';
+import { computed, onActivated, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { DETAIL_ACTION_ORDER, DETAIL_CARD_KEYS } from '@/constants/detail';
@@ -43,6 +51,7 @@ const { t } = useI18n();
 
 const router = useRouter();
 const route = useRoute();
+const isNavigating = ref(false);
 
 const { textValue, detailValues, handleActivated } = useDetailDemoState(route, t);
 
@@ -56,23 +65,38 @@ const statusCards = computed(() =>
 );
 
 onActivated(() => {
+  isNavigating.value = false;
   handleActivated();
 });
 
+const navigate = async action => {
+  if (isNavigating.value) {
+    return;
+  }
+
+  isNavigating.value = true;
+
+  try {
+    await action();
+  } finally {
+    isNavigating.value = false;
+  }
+};
+
 const onLogin = () => {
-  router.push(ROUTE_PATHS.login);
+  navigate(() => router.push(ROUTE_PATHS.login));
 };
 
 const onReplace = () => {
-  router.replace(getMainDetailPath(Number(route.params.id) + 1));
+  navigate(() => router.replace(getMainDetailPath(Number(route.params.id) + 1)));
 };
 
 const onPushSame = () => {
-  router.push(getMainDetailPath(Number(route.params.id) + 1));
+  navigate(() => router.push(getMainDetailPath(Number(route.params.id) + 1)));
 };
 
 const onPush = () => {
-  router.push(ROUTE_PATHS.home);
+  navigate(() => router.push(ROUTE_PATHS.home));
 };
 
 const actionMap = {
@@ -98,6 +122,8 @@ const actionButtons = computed(() =>
   DETAIL_ACTION_ORDER.map(key => ({
     key,
     label: key === 'replace' ? t('detail.replace') : t(`detail.push.${key}`),
+    loading: key === 'same' && isNavigating.value,
+    disabled: isNavigating.value,
     ...actionMap[key]
   }))
 );
@@ -187,6 +213,26 @@ const actionButtons = computed(() =>
     :deep(.van-field) {
       border-radius: 16px;
       overflow: hidden;
+    }
+
+    .input-feedback {
+      margin-top: 10px;
+      padding: 12px 14px;
+    }
+
+    .feedback-label {
+      font-size: 12px;
+      color: var(--app-text-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .feedback-value {
+      margin-top: 6px;
+      color: var(--app-text-strong);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.6;
     }
   }
 }

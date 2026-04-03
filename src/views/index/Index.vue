@@ -20,7 +20,9 @@
         </div>
       </div>
       <div class="form">
-        <van-button class="hero-button" type="primary" @click="onExperience" block>{{ t('quickStart') }}</van-button>
+        <van-button class="hero-button" :loading="isEntering" type="primary" @click="onExperience" block>
+          {{ t('quickStart') }}
+        </van-button>
       </div>
     </section>
     <section class="change-language app-card">
@@ -67,6 +69,7 @@ const { t } = useI18n();
 const language = ref(getLanguageLabel(getLocale(i18n)));
 
 const showPicker = ref(false);
+const isEntering = ref(false);
 
 const columns = LANGUAGE_OPTIONS;
 
@@ -77,8 +80,18 @@ const onConfirm = ({ selectedOptions }) => {
   applyRouteTitle(router.currentRoute.value, i18n, APP_NAME);
 };
 
-const onExperience = () => {
-  router.push(ROUTE_PATHS.home);
+const onExperience = async () => {
+  if (isEntering.value) {
+    return;
+  }
+
+  isEntering.value = true;
+
+  try {
+    await router.push(ROUTE_PATHS.home);
+  } finally {
+    isEntering.value = false;
+  }
 };
 </script>
 

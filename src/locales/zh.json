@@ -33,7 +33,12 @@
   },
   "loginForm": {
     "usernameLabel": "用户名",
-    "passwordLabel": "密码"
+    "passwordLabel": "密码",
+    "tip": "这里只做演示，不校验密码内容。用户名会暂存在 sessionStorage 中，用来模拟登录返回。"
+  },
+  "feedback": {
+    "usernameRequired": "请先输入用户名",
+    "loginSaved": "已保存登录信息"
   },
   "detail": {
     "desc": "在下面的input中输入内容，然后push到下一页面",
@@ -50,6 +55,9 @@
     "currentUserName": "当前用户",
     "activationCount": "激活次数",
     "cachedInput": "缓存输入",
+    "inputStatusLabel": "输入状态",
+    "inputStatusEmpty": "还没有输入内容，返回后也会保持为空。",
+    "inputStatusReady": "当前输入会跟随缓存页面一起保留。",
     "emptyInput": "暂未输入内容",
     "noUser": "未登录"
   },

@@ -2,7 +2,7 @@
   <div class="login">
     <div class="form">
       <brand-lockup class="logo" :title="t('loginHero.title')" :description="t('loginHero.description')" />
-      <van-form>
+      <van-form @submit="onLogin">
         <van-cell-group inset>
           <van-field
             v-model="userName"
@@ -23,8 +23,17 @@
             :placeholder="t('placeholder.password') + '…'"
           />
         </van-cell-group>
+        <p class="form-tip">{{ t('loginForm.tip') }}</p>
         <div class="action-wrap">
-          <van-button @click="onLogin" type="primary" block>{{ t('login') }}</van-button>
+          <van-button
+            :loading="isSubmitting"
+            :disabled="isSubmitDisabled"
+            native-type="submit"
+            type="primary"
+            block
+          >
+            {{ t('login') }}
+          </van-button>
         </div>
       </van-form>
     </div>
@@ -32,9 +41,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import { showFailToast, showSuccessToast } from 'vant';
 import BrandLockup from '@/components/BrandLockup.vue';
 import { setStoredUsername } from '@/utils/sessionStorage';
 
@@ -42,12 +52,33 @@ const { t } = useI18n();
 
 const userName = ref('');
 const password = ref('');
+const isSubmitting = ref(false);
 
 const router = useRouter();
+const isSubmitDisabled = computed(() => !userName.value.trim() || isSubmitting.value);
 
-const onLogin = () => {
-  setStoredUsername(userName.value);
-  router.back();
+const onLogin = async event => {
+  event?.preventDefault?.();
+  const nextUserName = userName.value.trim();
+
+  if (isSubmitting.value) {
+    return;
+  }
+
+  if (!nextUserName) {
+    showFailToast(t('feedback.usernameRequired'));
+    return;
+  }
+
+  isSubmitting.value = true;
+
+  try {
+    setStoredUsername(nextUserName);
+    showSuccessToast(t('feedback.loginSaved'));
+    await router.back();
+  } finally {
+    isSubmitting.value = false;
+  }
 };
 </script>
 
@@ -71,6 +102,13 @@ const onLogin = () => {
 
     .logo {
       margin-bottom: 18px;
+    }
+
+    .form-tip {
+      margin: 14px 4px 0;
+      color: var(--app-text-muted);
+      font-size: 12px;
+      line-height: 1.7;
     }
 
     .action-wrap {

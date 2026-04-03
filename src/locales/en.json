@@ -33,7 +33,12 @@
   },
   "loginForm": {
     "usernameLabel": "Username",
-    "passwordLabel": "Password"
+    "passwordLabel": "Password",
+    "tip": "This is a demo flow, so the password is not validated. The user name is stored in sessionStorage to simulate a login return."
+  },
+  "feedback": {
+    "usernameRequired": "Please enter a username first",
+    "loginSaved": "Login state saved"
   },
   "detail": {
     "desc": "enter some text in the input，then push to next page",
@@ -50,6 +55,9 @@
     "currentUserName": "current user name",
     "activationCount": "activation count",
     "cachedInput": "cached input",
+    "inputStatusLabel": "input status",
+    "inputStatusEmpty": "No content yet, and that empty state will also be restored on return.",
+    "inputStatusReady": "This input will stay with the cached page state.",
     "emptyInput": "no input yet",
     "noUser": "guest"
   },

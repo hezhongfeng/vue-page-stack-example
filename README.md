@@ -65,6 +65,12 @@ pnpm run build
 pnpm run lint
 ```
 
+### 运行测试
+
+```bash
+pnpm test
+```
+
 ## 目录结构
 
 ```text
@@ -97,6 +103,7 @@ src/
 - 推荐在浏览器移动端模式或真机容器里调试这个项目
 - 这个仓库最核心的验证点是“前进后缓存页面、返回时恢复页面状态”
 - 调整页面结构时，建议优先保留首页、列表页、详情页、登录页之间的示例链路
+- 单元测试使用 `Vitest + jsdom`，当前主要覆盖语言持久化、标题同步、登录状态和详情页状态组合逻辑
 
 ## 推荐验证路径
 
@@ -126,3 +133,5 @@ src/
 如果你的目标是搭建一个同时覆盖移动端和桌面端的通用模板，请不要直接基于这个示例继续扩展。
 
 历史上使用过的 `render function` 应用壳层方案已经转存到 [`docs/AppWithRenderFunction.md`](/Users/hezf/github/vue-page-stack-example/docs/AppWithRenderFunction.md)。
+
+当前页面缓存与状态恢复链路说明见 [`docs/STATE_FLOW.md`](/Users/hezf/github/vue-page-stack-example/docs/STATE_FLOW.md)。
