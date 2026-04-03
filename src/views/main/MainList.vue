@@ -2,9 +2,7 @@
   <div class="main-list">
     <div class="header-placeholder"></div>
     <div class="intro app-card">
-      <div class="intro-kicker">{{ t('ui.stackDemo') }}</div>
-      <div class="intro-title">{{ t('home') }}</div>
-      <div class="intro-copy">{{ t('ui.mainListHint') }}</div>
+      <section-intro :kicker="t('ui.stackDemo')" :title="t('home')" :copy="t('ui.mainListHint')" />
     </div>
     <div class="scroll" ref="wrapper">
       <div class="scroll-content">
@@ -28,6 +26,7 @@ import { useI18n } from 'vue-i18n';
 import { useBetterScroll } from '@/composables/useBetterScroll';
 import { MAIN_LIST_ITEMS } from '@/constants/mainList';
 import { getMainDetailPath } from '@/constants/routes';
+import SectionIntro from '@/components/SectionIntro.vue';
 import MainItem from './components/MainItem.vue';
 import StackHeader from './components/StackHeader.vue';
 
@@ -67,26 +66,8 @@ nextTick(() => {
     padding: 14px 14px 15px;
   }
 
-  .intro-kicker {
-    font-size: 11px;
-    color: var(--app-primary-strong);
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  .intro-title {
-    margin-top: 6px;
-    color: var(--app-text-strong);
-    font-size: 20px;
-    font-weight: 800;
-  }
-
-  .intro-copy {
-    margin-top: 6px;
-    color: var(--app-text-muted);
-    font-size: 13px;
-    line-height: 1.55;
+  :deep(.section-intro .copy) {
+    max-width: 28em;
   }
 
   .scroll {

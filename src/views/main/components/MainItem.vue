@@ -44,23 +44,37 @@ const animationend = () => {
 </script>
 
 <template>
-  <div class="main-item" :style="styleObject" @click="onClick" @animationend="animationend">
+  <button
+    class="main-item"
+    type="button"
+    :style="styleObject"
+    :data-testid="`main-list-item-${props.item.id}`"
+    :aria-label="message"
+    @click="onClick"
+    @animationend="animationend"
+  >
     <div class="content">
       <div class="badge">{{ props.index + 1 }}</div>
       <div class="message-wrap">{{ message }}</div>
     </div>
-  </div>
+  </button>
 </template>
 
 <style lang="scss">
 .main-item {
   height: 34vw;
+  width: calc(100% - var(--app-page-padding) * 2);
   min-height: 136px;
   margin: 0 var(--app-page-padding) 10px;
   border-radius: 22px;
   box-shadow: var(--app-card-shadow);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.32);
+  appearance: none;
+  text-align: inherit;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
 
   .content {
     height: 100%;

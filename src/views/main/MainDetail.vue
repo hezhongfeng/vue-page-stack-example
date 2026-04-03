@@ -4,17 +4,20 @@
     <div class="p-scroll-wrap">
       <div class="desc-wrap">
         <div class="app-chip">{{ t('ui.stateCache') }}</div>
-        <div class="desc">{{ t('detail.desc') }}</div>
-        <div class="tip">{{ t('detail.tip') }}</div>
+        <section-intro :title="t('detail.desc')" :copy="t('detail.tip')" />
       </div>
       <div class="status-grid">
-        <div v-for="card in statusCards" :key="card.key" class="status-card app-card">
-          <div class="label">{{ card.label }}</div>
-          <div class="value" :class="{ 'value-text': card.multiline }">{{ card.value }}</div>
-        </div>
+        <info-card
+          v-for="card in statusCards"
+          :key="card.key"
+          :label="card.label"
+          :value="card.value"
+          :multiline="card.multiline"
+          :test-id="`detail-card-${card.key}`"
+        />
       </div>
       <div class="form">
-        <van-field v-model="textValue" clearable :placeholder="t('detail.placeholder')" />
+        <van-field v-model="textValue" data-testid="detail-input" clearable :placeholder="t('detail.placeholder')" />
         <div class="input-feedback app-card">
           <div class="feedback-label">{{ t('detail.inputStatusLabel') }}</div>
           <div class="feedback-value">
@@ -25,6 +28,7 @@
         <van-button
           v-for="action in actionButtons"
           :key="action.key"
+          :data-testid="action.testId"
           @click="action.handler"
           :loading="action.loading"
           :disabled="action.disabled"
@@ -45,6 +49,8 @@ import { useI18n } from 'vue-i18n';
 import { DETAIL_ACTION_ORDER, DETAIL_CARD_KEYS } from '@/constants/detail';
 import { ROUTE_PATHS, getMainDetailPath } from '@/constants/routes';
 import { useDetailDemoState } from '@/composables/useDetailDemoState';
+import InfoCard from '@/components/InfoCard.vue';
+import SectionIntro from '@/components/SectionIntro.vue';
 import StackHeader from './components/StackHeader.vue';
 
 const { t } = useI18n();
@@ -122,6 +128,7 @@ const actionButtons = computed(() =>
   DETAIL_ACTION_ORDER.map(key => ({
     key,
     label: key === 'replace' ? t('detail.replace') : t(`detail.push.${key}`),
+    testId: `detail-action-${key}`,
     loading: key === 'same' && isNavigating.value,
     disabled: isNavigating.value,
     ...actionMap[key]
@@ -147,19 +154,17 @@ const actionButtons = computed(() =>
     line-height: 1.8;
     color: var(--app-text-default);
 
-    .desc {
+    :deep(.section-intro) {
       margin-top: 12px;
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--app-text-strong);
-      text-wrap: balance;
     }
 
-    .tip {
+    :deep(.section-intro .title) {
+      font-size: 24px;
+    }
+
+    :deep(.section-intro .copy) {
       margin-top: 10px;
-      font-size: 13px;
       line-height: 1.7;
-      color: var(--app-text-muted);
     }
   }
 
@@ -168,31 +173,6 @@ const actionButtons = computed(() =>
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     padding: 0 var(--app-page-padding) 10px;
-  }
-
-  .status-card {
-    min-height: 88px;
-    padding: 14px;
-    .label {
-      font-size: 12px;
-      color: var(--app-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .value {
-      margin-top: 10px;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--app-text-strong);
-      word-break: break-word;
-    }
-
-    .value-text {
-      font-size: 14px;
-      line-height: 1.6;
-      font-weight: 500;
-    }
   }
 
   .form {

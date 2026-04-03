@@ -8,9 +8,7 @@
         <div class="version">v{{ APP_VERSION }}</div>
         <div class="auther">Author: {{ ABOUT_AUTHOR }}</div>
       </div>
-      <div class="intro">
-        <h2 class="app-section-title">{{ t('aboutPage.desc1') }}</h2>
-      </div>
+      <section-intro class="intro" :title="t('aboutPage.desc1')" centered />
     </div>
     <div class="desc app-card">{{ t('aboutPage.desc2') }}</div>
     <div class="desc app-card">{{ t('aboutPage.desc3') }}</div>
@@ -20,6 +18,7 @@
 <script setup>
 import { ABOUT_AUTHOR } from '@/constants/about';
 import { APP_VERSION } from '@/constants/app';
+import SectionIntro from '@/components/SectionIntro.vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 </script>

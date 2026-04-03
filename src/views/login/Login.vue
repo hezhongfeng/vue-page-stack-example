@@ -6,6 +6,7 @@
         <van-cell-group inset>
           <van-field
             v-model="userName"
+            data-testid="login-username"
             name="username"
             :label="t('loginForm.usernameLabel')"
             :aria-label="t('loginForm.usernameLabel')"
@@ -26,6 +27,7 @@
         <p class="form-tip">{{ t('loginForm.tip') }}</p>
         <div class="action-wrap">
           <van-button
+            data-testid="login-submit"
             :loading="isSubmitting"
             :disabled="isSubmitDisabled"
             native-type="submit"

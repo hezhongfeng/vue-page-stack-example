@@ -10,17 +10,18 @@
         <p class="explain app-section-copy">{{ t('explain') }}</p>
       </div>
       <div class="meta">
-        <div class="meta-item">
-          <span class="meta-label">{{ t('ui.version') }}</span>
-          <span class="meta-value">v{{ APP_VERSION }}</span>
-        </div>
-        <div class="meta-item">
-          <span class="meta-label">{{ t('language') }}</span>
-          <span class="meta-value">{{ language }}</span>
-        </div>
+        <info-card :label="t('ui.version')" :value="`v${APP_VERSION}`" />
+        <info-card :label="t('language')" :value="language" />
       </div>
       <div class="form">
-        <van-button class="hero-button" :loading="isEntering" type="primary" @click="onExperience" block>
+        <van-button
+          class="hero-button"
+          data-testid="quick-start-button"
+          :loading="isEntering"
+          type="primary"
+          @click="onExperience"
+          block
+        >
           {{ t('quickStart') }}
         </van-button>
       </div>
@@ -57,6 +58,7 @@ import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { i18n, getLocale, setI18nLanguage } from '../../i18n';
 import { APP_NAME, APP_VERSION } from '@/constants/app';
+import InfoCard from '@/components/InfoCard.vue';
 import { LANGUAGE_OPTIONS, getLanguageLabel } from '@/constants/languages';
 import { ROUTE_PATHS } from '@/constants/routes';
 import { applyRouteTitle } from '@/router/title';
@@ -134,26 +136,8 @@ const onExperience = async () => {
     margin-top: 22px;
   }
 
-  .meta-item {
-    padding: 14px 12px;
-    border-radius: 14px;
-    background: rgba(255, 255, 255, 0.72);
-  }
-
-  .meta-label {
-    display: block;
-    font-size: 11px;
-    color: var(--app-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .meta-value {
-    display: block;
-    margin-top: 8px;
-    color: var(--app-text-strong);
-    font-size: 15px;
-    font-weight: 700;
+  :deep(.info-card) {
+    min-height: auto;
   }
 
   .form {
