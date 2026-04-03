@@ -6,6 +6,7 @@ import './styles/tokens.scss';
 import './styles/base.scss';
 import './styles/utilities.scss';
 import { APP_NAME } from './constants/app';
+import { installRouteTitleSync } from './router/title';
 
 import { VuePageStackPlugin } from 'vue-page-stack';
 // import { VuePageStackPlugin } from '../../vue-page-stack/dist/vue-page-stack.es';
@@ -18,9 +19,6 @@ app.use(VuePageStackPlugin, { router });
 
 app.use(i18n);
 
-router.afterEach(to => {
-  const titleKey = to.meta?.titleKey;
-  document.title = titleKey ? i18n.global.t(titleKey) : APP_NAME;
-});
+installRouteTitleSync(router, i18n, APP_NAME);
 
 app.mount('#app');

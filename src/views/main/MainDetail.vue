@@ -31,11 +31,12 @@
 </template>
 
 <script setup>
-import { computed, onActivated, ref } from 'vue';
+import { computed, onActivated } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { DETAIL_ACTION_ORDER, DETAIL_CARD_KEYS } from '@/constants/detail';
 import { ROUTE_PATHS, getMainDetailPath } from '@/constants/routes';
+import { useDetailDemoState } from '@/composables/useDetailDemoState';
 import StackHeader from './components/StackHeader.vue';
 
 const { t } = useI18n();
@@ -43,18 +44,7 @@ const { t } = useI18n();
 const router = useRouter();
 const route = useRoute();
 
-const userName = ref('');
-const textValue = ref('');
-const activationCount = ref(0);
-
-const currentPageId = computed(() => route.params.id);
-
-const detailValues = computed(() => ({
-  currentPageNumber: currentPageId.value,
-  currentUserName: userName.value || t('detail.noUser'),
-  activationCount: activationCount.value,
-  cachedInput: textValue.value || t('detail.emptyInput')
-}));
+const { textValue, detailValues, handleActivated } = useDetailDemoState(route, t);
 
 const statusCards = computed(() =>
   DETAIL_CARD_KEYS.map(key => ({
@@ -66,10 +56,7 @@ const statusCards = computed(() =>
 );
 
 onActivated(() => {
-  activationCount.value += 1;
-  if (window.sessionStorage.username) {
-    userName.value = window.sessionStorage.username;
-  }
+  handleActivated();
 });
 
 const onLogin = () => {

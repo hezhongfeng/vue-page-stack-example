@@ -15,26 +15,42 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
+import { HOME_TAB_VALUES, getHomeTabQueryValue, normalizeHomeTab } from '@/constants/homeTabs';
+import { ROUTE_PATHS } from '@/constants/routes';
 import MainList from '../main/MainList.vue';
 import About from '../about/About.vue';
 
-const selectedIndex = ref('0');
-
 const { t } = useI18n();
+const route = useRoute();
+const router = useRouter();
+
+const selectedIndex = computed({
+  get: () => normalizeHomeTab(route.query.tab),
+  set: value => {
+    router.replace({
+      path: ROUTE_PATHS.home,
+      query: {
+        ...route.query,
+        tab: getHomeTabQueryValue(value)
+      }
+    });
+  }
+});
 
 const tabs = computed(() => {
   return [
     {
-      value: '0',
+      value: HOME_TAB_VALUES.main,
       label: t('home'),
-      icon: selectedIndex.value === '0' ? 'wap-home' : 'wap-home-o'
+      icon: selectedIndex.value === HOME_TAB_VALUES.main ? 'wap-home' : 'wap-home-o'
     },
     {
-      value: '1',
+      value: HOME_TAB_VALUES.about,
       label: t('about'),
-      icon: selectedIndex.value === '1' ? 'manager' : 'manager-o'
+      icon: selectedIndex.value === HOME_TAB_VALUES.about ? 'manager' : 'manager-o'
     }
   ];
 });

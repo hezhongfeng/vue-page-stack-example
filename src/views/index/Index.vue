@@ -54,9 +54,10 @@
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { i18n, getLocale, setI18nLanguage } from '../../i18n';
-import { APP_VERSION } from '@/constants/app';
+import { APP_NAME, APP_VERSION } from '@/constants/app';
 import { LANGUAGE_OPTIONS, getLanguageLabel } from '@/constants/languages';
 import { ROUTE_PATHS } from '@/constants/routes';
+import { applyRouteTitle } from '@/router/title';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -73,7 +74,7 @@ const onConfirm = ({ selectedOptions }) => {
   language.value = selectedOptions[0]?.text;
   showPicker.value = false;
   setI18nLanguage(i18n, selectedOptions[0]?.value);
-  document.title = t('route.index');
+  applyRouteTitle(router.currentRoute.value, i18n, APP_NAME);
 };
 
 const onExperience = () => {

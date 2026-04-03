@@ -11,6 +11,7 @@
   "route": {
     "index": "Home",
     "home": "Main",
+    "about": "About",
     "login": "Login",
     "mainDetail": "Detail"
   },
@@ -25,6 +26,14 @@
   "placeholder": {
     "username": "please enter user name",
     "password": "please enter password"
+  },
+  "loginHero": {
+    "title": "Log in to continue",
+    "description": "Enter a user name and return to the detail page to see cached state stay in place."
+  },
+  "loginForm": {
+    "usernameLabel": "Username",
+    "passwordLabel": "Password"
   },
   "detail": {
     "desc": "enter some text in the input，then push to next page",

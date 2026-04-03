@@ -11,6 +11,7 @@
   "route": {
     "index": "首页",
     "home": "主页",
+    "about": "关于",
     "login": "登录",
     "mainDetail": "详情"
   },
@@ -25,6 +26,14 @@
   "placeholder": {
     "username": "请输入用户名",
     "password": "请输入密码"
+  },
+  "loginHero": {
+    "title": "登录继续演示",
+    "description": "输入一个用户名后返回详情页，观察缓存页面如何继续保留之前的内容与状态。"
+  },
+  "loginForm": {
+    "usernameLabel": "用户名",
+    "passwordLabel": "密码"
   },
   "detail": {
     "desc": "在下面的input中输入内容，然后push到下一页面",

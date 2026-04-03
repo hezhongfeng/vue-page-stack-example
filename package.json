@@ -7,6 +7,7 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "vitest run",
     "lint": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\"",
     "lint-fix": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --fix --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\"",
     "prepare": "husky install",
@@ -35,6 +36,7 @@
     "@commitlint/cli": "^17.6.3",
     "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/test-utils": "^2.4.6",
     "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",
     "commitlint-config-git-commit-emoji": "^1.0.0",
@@ -43,9 +45,11 @@
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.27.0",
     "husky": "^8.0.3",
+    "jsdom": "^29.0.1",
     "lint-staged": "^13.2.2",
     "sass": "^1.77.8",
     "unplugin-vue-components": "^0.27.2",
-    "vite": "^5.4.21"
+    "vite": "^5.4.21",
+    "vitest": "^1.6.1"
   }
 }
