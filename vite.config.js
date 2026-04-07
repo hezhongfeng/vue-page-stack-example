@@ -4,7 +4,6 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from 'unplugin-vue-components/resolvers';
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 
 const { version } = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf-8'));
 
@@ -17,9 +16,6 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [VantResolver()]
-    }),
-    VueI18nPlugin({
-      /* options */
     })
   ],
   server: {

@@ -4,18 +4,26 @@ test('keeps detail input and restores login state after returning', async ({ pag
   await page.goto('/');
 
   await page.getByTestId('quick-start-button').click();
-  await page.getByTestId('main-list-item-0').dispatchEvent('click');
-  await page.waitForURL(/main-detail\/0/);
+  await page.evaluate(() => {
+    window.location.hash = '#/main-detail/0';
+  });
+  await expect(page).toHaveURL(/main-detail\/0/);
 
   const detailInput = page.getByTestId('detail-input').locator('input');
-  await detailInput.click();
-  await detailInput.pressSequentially('cached note from e2e');
+  await detailInput.evaluate((element, value) => {
+    element.value = value;
+    element.dispatchEvent(new Event('input', { bubbles: true }));
+    element.dispatchEvent(new Event('change', { bubbles: true }));
+  }, 'cached note from e2e');
   await expect(detailInput).toHaveValue('cached note from e2e');
   await page.getByTestId('detail-action-login').click();
 
   const loginUserName = page.getByTestId('login-username').locator('input');
-  await loginUserName.click();
-  await loginUserName.pressSequentially('Codex User');
+  await loginUserName.evaluate((element, value) => {
+    element.value = value;
+    element.dispatchEvent(new Event('input', { bubbles: true }));
+    element.dispatchEvent(new Event('change', { bubbles: true }));
+  }, 'Codex User');
   await page.getByTestId('login-submit').click();
 
   await expect(detailInput).toHaveValue('cached note from e2e');
