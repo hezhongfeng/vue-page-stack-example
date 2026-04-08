@@ -12,21 +12,13 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:e2e": "playwright test",
-    "lint": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\"",
-    "lint-fix": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --fix --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\"",
+    "lint": "eslint src vite.config.js",
+    "lint-fix": "eslint src vite.config.js --fix",
     "prepare": "husky install",
     "format": "prettier --write src/"
   },
   "lint-staged": {
-    "*.{vue,js,jsx,tsx}": "eslint src vite.config.js --ext .vue,.js,.jsx,.mjs --ignore-path .gitignore --ignore-pattern \"*.timestamp-*.mjs\""
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-customizable"
-    },
-    "cz-customizable": {
-      "config": "./.cz-config.cjs"
-    }
+    "*.{vue,js,jsx,tsx}": "eslint src vite.config.js"
   },
   "pnpm": {
     "overrides": {
@@ -55,22 +47,21 @@
     "@better-scroll/core": "^2.5.1",
     "vant": "^4.9.17",
     "vue": "^3.5.13",
-    "vue-i18n": "^9.14.5",
+    "vue-i18n": "^11.1.6",
     "vue-page-stack": "^3.3.0",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.3",
+    "@commitlint/cli": "^20.5.0",
+    "@eslint/js": "^9.35.0",
     "@playwright/test": "^1.59.1",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/test-utils": "^2.4.6",
-    "commitizen": "^4.3.0",
     "commitlint-config-cz": "^0.13.3",
     "commitlint-config-git-commit-emoji": "^1.0.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "cz-customizable": "^7.0.0",
-    "eslint": "^8.56.0",
-    "eslint-plugin-vue": "^9.27.0",
+    "eslint": "^9.35.0",
+    "eslint-plugin-vue": "~10.4.0",
+    "globals": "^16.4.0",
     "husky": "^8.0.3",
     "jsdom": "^29.0.1",
     "lint-staged": "^13.2.2",
