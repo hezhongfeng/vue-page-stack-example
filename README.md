@@ -77,6 +77,12 @@ pnpm test
 pnpm run test:e2e
 ```
 
+### 检查最近一次提交信息
+
+```bash
+pnpm run commit:check
+```
+
 ## 目录结构
 
 ```text
@@ -111,6 +117,43 @@ src/
 - 调整页面结构时，建议优先保留首页、列表页、详情页、登录页之间的示例链路
 - 单元测试使用 `Vitest + jsdom`，当前主要覆盖语言持久化、标题同步、登录状态和详情页状态组合逻辑
 - 端到端测试使用 `Playwright`，当前覆盖“首页 -> 列表 -> 详情 -> 登录 -> 返回恢复”这条关键烟雾链路
+
+## 提交规范
+
+提交信息统一使用：
+
+```text
+<type>(<scope>): <subject>
+```
+
+`type` 使用纯文本，不再带 emoji：
+
+- `init`
+- `feat`
+- `fix`
+- `docs`
+- `style`
+- `refactor`
+- `perf`
+- `test`
+- `build`
+- `ci`
+- `chore`
+- `revert`
+
+`scope` 当前限定为：
+
+- `文档`
+- `资源`
+- `表现`
+
+示例：
+
+```text
+fix(表现): 修正详情页当前页码展示
+docs(文档): 补充移动端使用限制说明
+chore(资源): 清理弃用依赖并升级工具链
+```
 
 ## 推荐验证路径
 

@@ -14,6 +14,7 @@
     "test:e2e": "playwright test",
     "lint": "eslint src vite.config.js",
     "lint-fix": "eslint src vite.config.js --fix",
+    "commit:check": "commitlint --from=HEAD~1 --to=HEAD --verbose",
     "prepare": "husky install",
     "format": "prettier --write src/"
   },
@@ -57,8 +58,6 @@
     "@playwright/test": "^1.59.1",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/test-utils": "^2.4.6",
-    "commitlint-config-cz": "^0.13.3",
-    "commitlint-config-git-commit-emoji": "^1.0.0",
     "eslint": "^9.35.0",
     "eslint-plugin-vue": "~10.4.0",
     "globals": "^16.4.0",
